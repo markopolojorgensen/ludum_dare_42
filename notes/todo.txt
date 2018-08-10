@@ -24,8 +24,6 @@ Game Todo
       or just bigger window for reflecting them
 
   player
-    moves around
-    dash
     health
       focus to restore health
         can't move while focusing

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://diagetics/player/player.gd" type="Script" id=1]
 [ext_resource path="res://systems/movement/movement.gd" type="Script" id=2]
 [ext_resource path="res://diagetics/player/intended_direction.gd" type="Script" id=3]
+[ext_resource path="res://systems/movement/dash.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -47,5 +48,18 @@ intended_direction_path = NodePath("../intended_direction")
 [node name="intended_direction" type="Node" parent="." index="2"]
 
 script = ExtResource( 3 )
+
+[node name="dash" type="Node" parent="." index="3"]
+
+script = ExtResource( 4 )
+body_path = NodePath("..")
+movement_path = NodePath("../movement")
+
+[node name="dash_timer" type="Timer" parent="dash" index="0"]
+
+process_mode = 1
+wait_time = 0.05
+one_shot = false
+autostart = false
 
 

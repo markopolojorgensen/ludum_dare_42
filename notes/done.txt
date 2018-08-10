@@ -1,3 +1,5 @@
   git repo
   find stream notes
   isolate audio stream
+  player movement
+  player dash
