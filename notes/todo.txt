@@ -1,0 +1,159 @@
+Prestream
+  copy logo intro
+
+Game Todo
+  Running out of space
+
+  boss takes away space from player somehow
+    boss mines
+    boss burns away area / destroys it somehow
+    autoscroller? based on boss's health
+    shrinking platforms / arena
+    obstructed area: debris, etc
+    boss physically expands
+    screen space is obstructed, difficult to see the player
+      virus
+      fog / snow / precipitation
+      cherry blossoms
+  
+  health packs to reward defensive players
+    don't want to automatically restart when taking hits early
+
+  player can reflect boss projectiles, easier with more space
+    projectiles probably slow down as they move if that makes it easier to reflect them
+      or just bigger window for reflecting them
+
+  player
+    moves around
+    dash
+    health
+      focus to restore health
+        can't move while focusing
+        arena shrinks while focusing
+    reflect / attack button
+      needs a cooldown
+
+  training bosses
+
+  boss
+    health
+      (phases)
+    moves around
+    attacks
+      projectiles
+        expanding circles / waves
+          maybe break up after certain distance
+        not bullets?
+      summon wall
+      summon mines
+  
+  arena
+    phases space
+      island
+      series of islands
+      catwalks
+      clouds?
+      nothing
+    obstacles (walls or something)
+
+  powerup
+    ghost through walls
+    flight
+    health packs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Publish Hour
+  github connection
+  copy butlerize
+  LDJam page
+
+
+
+
+
+
+
+    [Ludum Dare 42](https://ldjam.com/events/ludum-dare/42/GAME_NAME) page.
+    Download the game on [itch.io](https://markopolodev.itch.io/GAME_NAME)!
+    Source code on [Github](https://github.com/markopolojorgensen/ludum_dare_42).
+    Development Timelapse on [youtube](https://youtu.be/q9Y3624VRsY).
+
+
+
+Links (from everything to everything else)
+  spiel
+    This is a submission for [Ludum Dare 42](https://ldjam.com/events/ludum-dare/42/GAME_NAME).
+    Download the game on [itch.io](https://markopolodev.itch.io/GAME_NAME)!
+    Source code on [Github](https://github.com/markopolojorgensen/ludum_dare_42).
+    Development Timelapse on [youtube](https://youtu.be/q9Y3624VRsY).
+    Development Vods on [Twitch](https://www.twitch.tv/markopolodev/collections).
+    I'm on [Twitter](https://twitter.com/markopolodev).
+    I'm on [Twitch](https://www.twitch.tv/markopolodev)!
+  link locations
+    Twitch
+    LDJam page
+    itch.io
+    Github / readme
+    Twitter
+    youtube: https://youtu.be/q9Y3624VRsY
+
