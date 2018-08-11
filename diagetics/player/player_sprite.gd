@@ -1,6 +1,7 @@
 extends AnimatedSprite
 
 var dashing = false
+var casting = false
 
 func _process(delta):
 	if get_parent().linear_velocity.x > 30:
@@ -10,11 +11,12 @@ func _process(delta):
 	
 	if dashing:
 		play("dash")
+	elif casting:
+		play("cast")
 	elif get_parent().linear_velocity.length() > 120:
 		play("run")
 	else:
 		play("stand")
-
 
 func dashing():
 	dashing = true

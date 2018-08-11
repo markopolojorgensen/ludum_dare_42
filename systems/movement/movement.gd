@@ -9,11 +9,12 @@ export(int) var max_speed = 500
 export(NodePath) var intended_direction_path
 onready var intended_direction = get_node(intended_direction_path)
 
-var stop_moving
+var stop_moving = false
+var frozen = false
 
 func do_movement(state):
 	var id = intended_direction.get_intended_direction()
-	if id.length() > 0.1:
+	if id.length() > 0.1 and not frozen:
 		# accelerate that direction
 		body.apply_impulse(Vector2(), id.normalized() * acceleration * state.step)
 	
@@ -28,3 +29,8 @@ func do_movement(state):
 func stop_moving():
 	stop_moving = true
 
+func freeze():
+	frozen = true
+
+func unfreeze():
+	frozen = false

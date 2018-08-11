@@ -32,6 +32,7 @@ Game Todo
 
   player
     health
+      UI
       focus to restore health?
         can't move while focusing
         arena shrinks while focusing
@@ -41,12 +42,14 @@ Game Todo
     dash
       cooldown?
       don't overdash edges?
+    splash animation
 
 
   training bosses
 
   boss
     health
+      UI
       (phases)
     moves around
     attacks
@@ -58,17 +61,19 @@ Game Todo
       summon mines
   
   arena
+    wall of fire / move-right pressure
+      instantly kills you?
     level generator
-      start on solid land with ravines -> shoreline -> clouds
       big islands sections
       medium island sections
       small island sections
+      start on solid land with ravines -> shoreline -> clouds -> nothing?
       catwalks?
       clouds?
-      nothing
+
     waves
       wrap when moved offscreen to the left
-    obstacles (walls or something)
+    obstacles? (walls or something)
 
   powerup
     ghost through walls
@@ -81,6 +86,7 @@ sounds
   footsteps
   dash
   splash
+  cast_noise
 
 
 
