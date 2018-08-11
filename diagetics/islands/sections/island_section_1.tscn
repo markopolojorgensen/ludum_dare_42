@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://diagetics/islands/big_island_1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://diagetics/islands/medium_island_1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://diagetics/islands/tiny_island_1.tscn" type="PackedScene" id=3]
+
+[node name="island_section_1" type="Node2D"]
+
+__meta__ = {
+"_edit_horizontal_guides_": [ -763.995, 761.867 ],
+"_edit_vertical_guides_": [ -772.089, 773.299 ]
+}
+
+[node name="big_island_1" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( -2.78943, -351.478 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="medium_island_1" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -384.952, 348.689 )
+
+[node name="tiny_island_1" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 64.1587, 209.213 )
+
+[node name="tiny_island_2" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 326.946, 218.466 )
+
+[node name="tiny_island_3" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 169.644, 442.391 )
+
+[node name="tiny_island_4" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 352.855, 636.706 )
+
+[node name="tiny_island_5" parent="." index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 515.709, 407.229 )
+
+[node name="tiny_island_6" parent="." index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 621.194, 144.442 )
+
+

@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://diagetics/islands/sprites/island3.png" type="Texture" id=1]
+[ext_resource path="res://diagetics/islands/sprites/island_03.png" type="Texture" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="big_island_1" type="Node2D"]
+[node name="big_island_1" type="Node2D" index="0"]
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
@@ -29,7 +29,7 @@ bounce = 0.0
 
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="walls/static_body_2d" index="0"]
 
-position = Vector2( 0, 21.7124 )
+position = Vector2( -9.25305, 49.4717 )
 build_mode = 0
 polygon = PoolVector2Array( 684.438, -148.667, 728.781, -29.998, 736.183, 75.4869, 688.068, 173.569, 599.238, 258.698, 502.051, 309.563, 384.567, 341.975, 199.076, 359.305, 11.5828, 354.988, -185.294, 338.202, -364.667, 292.982, -539.518, 229.674, -623.71, 159.095, -699.296, 97.0288, -733.964, -2.45538, -699.296, -94.4028, -589.26, -201.424, -321.708, -327.918, -135.002, -375.713, 75.9977, -487.712, -218.733, -450.087, -646.224, -228.014, -796.124, -5.94, -743.008, 112.102, -664.73, 190.225, -563.635, 267.358, -393.307, 350.261, -204.89, 386.437, 12.5939, 399.344, 406.774, 419.701, 656.607, 277.204, 782.415, 154.308, 800.503, -32.6021, 741.717, -181.828, 632.549, -361.258, 406.774, -424.178, 71.4391, -476.198, -312.001, -371.713, -95.0018, -387.713, 45.592, -404.098, 361.198, -376.891, 551.122, -283.532 )
 

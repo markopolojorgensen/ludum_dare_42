@@ -1,29 +1,26 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
-[ext_resource path="res://diagetics/tutorial/tutorial.tscn" type="PackedScene" id=2]
+[ext_resource path="res://diagetics/islands/sections/island_section_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://diagetics/player/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://diagetics/waves/waves.gd" type="Script" id=4]
 [ext_resource path="res://diagetics/water.png" type="Texture" id=5]
 
-[node name="game" type="Node"]
+[node name="game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
 [node name="world" type="Node2D" parent="." index="0"]
 
-[node name="island_test" type="Node2D" parent="world" index="0"]
+[node name="section_test" type="Node2D" parent="world" index="0"]
 
-position = Vector2( 533.089, -4298.27 )
+[node name="island_section_1" parent="world/section_test" index="0" instance=ExtResource( 2 )]
 
-[node name="tutorial" parent="world" index="1" instance=ExtResource( 2 )]
+[node name="player" parent="world" index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 174.856, -21.8086 )
+[node name="waves" type="Node2D" parent="world" index="2"]
 
-[node name="player" parent="world" index="2" instance=ExtResource( 3 )]
-
-[node name="waves" type="Node2D" parent="world" index="3"]
-
+editor/display_folded = true
 z_index = -2
 script = ExtResource( 4 )
 _sections_unfolded = [ "Z Index" ]

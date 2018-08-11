@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://diagetics/islands/sprites/island2.png" type="Texture" id=1]
+[ext_resource path="res://diagetics/islands/sprites/island_02.png" type="Texture" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="medium_island_1" type="Node2D" index="0"]
+[node name="medium_island_1" type="Node2D"]
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
@@ -16,8 +16,6 @@ texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="walls" type="Node2D" parent="." index="1"]
-
-editor/display_folded = true
 
 [node name="static_body_2d" type="StaticBody2D" parent="walls" index="0"]
 
@@ -33,13 +31,13 @@ bounce = 0.0
 
 position = Vector2( 0, 21.7124 )
 build_mode = 0
-polygon = PoolVector2Array( 229.221, -182.627, 280.014, -94.008, 283.797, -27.5437, 256.779, 30.8152, 201.8, 94.305, 53.7899, 152.065, -126.71, 149.358, -225.985, 88.89, -270.208, 24.8126, -266.598, -89.8049, -239.523, -156.59, -178.153, -201.715, -81.5851, -206.227, -31.0451, -188.177, -28.3376, -168.322, -43.6801, -152.98, -146.565, -125.905, -157.395, -104.245, -156.493, -78.9749, -137.54, -57.3149, -96.9276, -34.7524, 60.1074, -36.5574, 118.77, -54.6074, 154.87, -84.3899, 155.955, -105.376, 131.952, -141.799, 73.0526, -160.712, 19.16, -153.632, 22.6811, -139.988, 124.185, -121.392, 130.502, -88.9024, 76.3524, -61.8274, -71.6576, -57.3149, -133.028, -78.0724, -130.32, -116.88, -23.8251, -144.857, -15.7026, -188.177, -53.6076, -222.472, -135.735, -236.912, -247.645, -195.397, -279.233, -107.855, -294.575, 26.6176, -258.475, 101.525, -149.273, 172.823, 39.3499, 180.945, 220.752, 120.478, 320.93, -32.0449, 260.462, -196.3, 193.677, -246.84, 69.1323, -247.742, -3.97015, -189.08, 7.76239, -141.247, 35.8849, -127.225, 9.1666, -180.081, 23.9646, -195.949, 74.6777, -226.396, 166.539, -224.235 )
+polygon = PoolVector2Array( 320.449, -34.2789, 262.376, 77.4551, 123.444, 162.726, -55.1834, 191.394, -234.546, 156.845, -322.022, 106.859, -367.275, 38.2975, -379.008, -53.7574, -305.115, -172.476, -187.5, -242.31, -113.256, -258.482, -61.0642, -262.892, -44.1571, -239.369, -52.2431, -207.761, -119.136, -177.622, -150.01, -143.808, -152.216, -108.523, -141.189, -73.9738, -80.9117, -54.1263, 53.6101, -53.3912, 135.205, -97.4968, 164.609, -143.072, 158.728, -179.092, 128.59, -196.734, 32.2925, -191.589, 140.351, -167.33, 86.6893, -96.0266, -61.7993, -76.9142, -110.315, -129.106, -24.3096, -187.913, -27.985, -239.369, -69.1502, -313.614, -185.295, -273.184, -313.936, -202.615, -418.319, -62.2123, -395.253, 43.7126, -352.835, 119.523, -281.538, 181.795, -161.037, 220.063, 55.0804, 214.917, 266.052, 161.991, 378.521, -24.7227, 344.707, -235.694, 235.913, -312.144, 67.5769, -324.64, 32.2925, -257.012, 35.2329, -196.734, 130.795, -183.503, 57.8025, -199.962, 46.9725, -252.307, 116.828, -275.389, 227.827, -266.568, 316.773, -176.152 )
 
 [node name="landing_zones" type="Node2D" parent="." index="2"]
 
 [node name="landing_zone_1" type="StaticBody2D" parent="landing_zones" index="0"]
 
-position = Vector2( 86.1066, -166.356 )
+position = Vector2( 127.207, -209.843 )
 input_pickable = false
 collision_layer = 2
 collision_mask = 0
@@ -50,6 +48,22 @@ bounce = 0.0
 _sections_unfolded = [ "Collision" ]
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_1" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="landing_zone_2" type="StaticBody2D" parent="landing_zones" index="1"]
+
+position = Vector2( -143.773, -189.916 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_2" index="0"]
 
 shape = SubResource( 1 )
 

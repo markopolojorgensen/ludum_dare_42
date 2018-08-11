@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/prota_dash_1.png-70643c3c3317ed50b40a886bb0480579.stex"
+path="res://.import/island_02.png-0366c9a0cefea6d21cb1108e8be7201a.stex"
 
 [deps]
 
-source_file="res://diagetics/player/frames/prota_dash_1.png"
-source_md5="e383b78585632d4fb5cc54d7f3069b06"
+source_file="res://diagetics/islands/sprites/island_02.png"
+source_md5="d650e8c5066a1d6c57ad96c8b4db01a3"
 
-dest_files=[ "res://.import/prota_dash_1.png-70643c3c3317ed50b40a886bb0480579.stex" ]
-dest_md5="cd3c56a496b0a78843b73e193b38a32b"
+dest_files=[ "res://.import/island_02.png-0366c9a0cefea6d21cb1108e8be7201a.stex" ]
+dest_md5="ffc8a63327aae8b18d493059371a8545"
 
 [params]
 

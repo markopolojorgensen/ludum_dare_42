@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/island1.png-65432dc3d56237c9da3a1d152a29e5e0.stex"
+path="res://.import/island_03.png-dd41c4eff4a3e0ade19d88c12b490cf1.stex"
 
 [deps]
 
-source_file="res://diagetics/islands/sprites/island1.png"
-source_md5="55f98bd6cbb00cdde2d7be179a68f3a6"
+source_file="res://diagetics/islands/sprites/island_03.png"
+source_md5="1595a0f69c8f867cd85a25952331781a"
 
-dest_files=[ "res://.import/island1.png-65432dc3d56237c9da3a1d152a29e5e0.stex" ]
-dest_md5="69e249ad7a1ef367085f08cc662a2eda"
+dest_files=[ "res://.import/island_03.png-dd41c4eff4a3e0ade19d88c12b490cf1.stex" ]
+dest_md5="b6dfacb7c13fcfcc5b7e4cb90daa686b"
 
 [params]
 
