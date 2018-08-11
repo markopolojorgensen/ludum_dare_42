@@ -53,20 +53,4 @@ _sections_unfolded = [ "Collision" ]
 
 shape = SubResource( 1 )
 
-[node name="landing_zone_2" type="StaticBody2D" parent="landing_zones" index="1"]
-
-position = Vector2( -85.0548, -153.377 )
-input_pickable = false
-collision_layer = 2
-collision_mask = 0
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Collision" ]
-
-[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_2" index="0"]
-
-shape = SubResource( 1 )
-
 

@@ -3,7 +3,7 @@
 [ext_resource path="res://diagetics/islands/medium_island_1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://diagetics/islands/big_island_1.tscn" type="PackedScene" id=2]
 
-[node name="tutorial" type="Node2D" index="0"]
+[node name="tutorial" type="Node2D"]
 
 [node name="label" type="Label" parent="." index="0"]
 
