@@ -88,7 +88,7 @@ intended_direction_path = NodePath("../intended_direction")
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="island_landing_zone_detector" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -0.00173569, 0.268217, -167.258, 229.674, -172.121, 386.919, 174.25, 387.999, 162.903, 220.488 )
+polygon = PoolVector2Array( -0.00173569, 0.268217, -89.319, 144.421, -97.9434, 233.983, 95.1119, 234.646, 91.1314, 142.431 )
 
 [node name="camera_2d" type="Camera2D" parent="." index="6"]
 
