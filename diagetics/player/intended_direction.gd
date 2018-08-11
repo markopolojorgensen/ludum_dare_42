@@ -21,7 +21,7 @@ func get_intended_direction():
 	return intended_direction
 
 func override(direction):
-	print("direction override!")
+	# print("direction override!")
 	overridden = true
 	intended_direction = direction
 

@@ -114,7 +114,6 @@ script = ExtResource( 4 )
 
 [node name="dash" type="Node2D" parent="." index="4"]
 
-editor/display_folded = true
 script = ExtResource( 5 )
 body_path = NodePath("..")
 movement_path = NodePath("../movement")
@@ -142,11 +141,12 @@ script = ExtResource( 6 )
 _sections_unfolded = [ "Collision", "Transform" ]
 body_path = NodePath("..")
 intended_direction_path = NodePath("../intended_direction")
+dash_path = NodePath("../dash")
 
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="island_landing_zone_detector" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -0.00173569, 0.268217, -91.5906, 205.661, -97.0056, 304.034, 97.0325, 309.449, 92.52, 196.636 )
+polygon = PoolVector2Array( -0.00173569, 0.268217, -127.691, 202.051, -138.521, 323.889, 146.67, 329.304, 140.353, 205.661 )
 
 [node name="camera_2d" type="Camera2D" parent="." index="6"]
 

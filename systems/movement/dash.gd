@@ -31,10 +31,14 @@ func _unhandled_input(event):
 		$dash_timer.start()
 		yield($dash_timer, "timeout")
 		
+		dash_end()
+
+func dash_end():
+	if dashing:
+		dashing = false
+		
 		movement.max_speed /= 8
 		movement.acceleration /= 8
-		
-		dashing = false
 		
 		lzd.dash_end()
 		

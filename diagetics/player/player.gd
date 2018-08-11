@@ -40,3 +40,6 @@ func got_wet(water):
 func set_target(new_target):
 	$attack.target = new_target
 
+func stop_moving():
+	$movement.stop_moving()
+
