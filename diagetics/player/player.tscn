@@ -68,7 +68,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="player" type="RigidBody2D" index="0"]
+[node name="player" type="RigidBody2D"]
 
 input_pickable = false
 collision_layer = 4
@@ -104,7 +104,7 @@ max_health = 20
 script = ExtResource( 3 )
 body_path = NodePath("..")
 acceleration = 15000
-max_speed = 800
+max_speed = 600
 intended_direction_path = NodePath("../intended_direction")
 
 [node name="intended_direction" type="Node" parent="." index="3"]
@@ -159,16 +159,16 @@ limit_top = -3000
 limit_right = 10000000
 limit_bottom = 3000
 limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
 smoothing_enabled = true
-smoothing_speed = 5.0
+smoothing_speed = 10.0
 offset_v = 0.0
 offset_h = 0.0
-drag_margin_left = 0.05
-drag_margin_top = 0.08
-drag_margin_right = 0.05
-drag_margin_bottom = 0.08
+drag_margin_left = 0.01
+drag_margin_top = 0.01
+drag_margin_right = 0.01
+drag_margin_bottom = 0.0
 editor_draw_screen = true
 editor_draw_limits = true
 editor_draw_drag_margin = true

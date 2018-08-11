@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://diagetics/islands/water_hazard.gd" type="Script" id=1]
+[ext_resource path="res://diagetics/islands/sprites/island2.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="big_island" type="Node2D"]
+
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="walls" type="Node2D" parent="." index="0"]
+
+[node name="static_body_2d" type="StaticBody2D" parent="walls" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="walls/static_body_2d" index="0"]
+
+position = Vector2( -542.653, -626.138 )
+build_mode = 0
+polygon = PoolVector2Array( 1847.6, 1102.11, 2001.03, 616.735, 1920.13, 110.131, 1738.81, -165.312, 745.89, -249.116, 1139.83, 23.6527, 968.635, 262.818, 653.944, 428.975, 427.366, 428.975, 220.929, 293.029, 135.333, 141.977, 286.384, -170.197, 553.243, -263.346, 27.0788, -452.161, -627.479, -258.311, -838.952, 308.134, -602.304, 1269.83, -307.753, 1697.81, 1554.18, 1997.39, -343.211, 1860.78, -749.252, 1287.77, -976.939, 380.817, -734.073, -362.959, -16.8604, -586.851, 586.509, -385.728, 613.073, -252.911, 328.464, -97.3248, 298.106, 213.847, 506.819, 331.485, 920.449, 213.847, 1003.93, 31.6976, 669.994, -173.22, 677.583, -347.78, 890.091, -385.728, 1785.66, -290.858, 2168.93, 392.201, 1994.37, 1105.62, 1565.56, 1614.12, 977.371, 1856.98, 457.487, 1864.57, 1487.25, 1546.76 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="landing_zones" type="Node2D" parent="." index="1"]
+
+[node name="landing_zone_1" type="StaticBody2D" parent="landing_zones" index="0"]
+
+position = Vector2( 333.94, -831.056 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_1" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="landing_zone_2" type="StaticBody2D" parent="landing_zones" index="1"]
+
+position = Vector2( -110.048, -891.772 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_2" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="water_hazards" type="Node2D" parent="." index="2"]
+
+visible = false
+
+[node name="area_2d" type="Area2D" parent="water_hazards" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+collision_mask = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="water_hazards/area_2d" index="0"]
+
+position = Vector2( 165.036, -621.496 )
+build_mode = 0
+polygon = PoolVector2Array( -171.194, -347.06, -116.078, -256.87, -383.307, -134.947, -440.093, 182.388, -388.317, 272.578, -202.927, 372.789, 69.3123, 329.364, 363.264, 20.3804, -4.17572, -215.115, 17.5365, -332.028, 211.278, -385.474, -563.687, -537.46 )
+
+[node name="sprite" type="Sprite" parent="." index="3"]
+
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+

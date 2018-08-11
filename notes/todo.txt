@@ -70,6 +70,10 @@ Game Todo
     health packs
 
 
+sounds
+  waves on the shore
+  footsteps
+  dash
 
 
 

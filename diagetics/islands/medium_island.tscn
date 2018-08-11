@@ -1,0 +1,142 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="medium_island" type="Node2D"]
+
+[node name="walls" type="Node2D" parent="." index="0"]
+
+[node name="static_body_2d" type="StaticBody2D" parent="walls" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="walls/static_body_2d" index="0"]
+
+position = Vector2( 0, 21.7124 )
+build_mode = 0
+polygon = PoolVector2Array( 356.89, -19.0138, 313.465, -57.428, 263.36, -40.7262, 241.647, 17.7302, 249.998, 355.107, 221.605, 396.862, 179.85, 415.234, 129.745, 423.585, 77.9693, 401.872, -454.819, 82.8673, -486.552, 11.0494, -463.17, -50.7473, -403.043, -110.874, 138.096, -454.931, 208.244, -478.314, 285.072, -466.623, 336.848, -424.868, 350.209, -358.061, 503.902, -19.2013, 408.665, -433.219, 239.977, -540.111, -210.565, -312.988, -533.317, -75.8, -531.647, 87.8778, 96.3414, 477.03, 239.977, 456.988, 301.774, 361.788, 316.805, 21.0706, 378.602, 46.1233, 440.399, 44.4531, 487.164, -7.32257, 378.468, -345.004, 455.431, -19.0138, 410.336, 12.7197 )
+
+[node name="landing_zones" type="Node2D" parent="." index="1"]
+
+[node name="landing_zone_1" type="StaticBody2D" parent="landing_zones" index="0"]
+
+position = Vector2( -405.855, 25.0527 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_1" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="landing_zone_2" type="StaticBody2D" parent="landing_zones" index="1"]
+
+position = Vector2( 245.516, -394.163 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_2" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="landing_zone_3" type="StaticBody2D" parent="landing_zones" index="2"]
+
+position = Vector2( 382.471, -70.1477 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_3" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="landing_zone_4" type="StaticBody2D" parent="landing_zones" index="3"]
+
+position = Vector2( 155.326, 359.089 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_4" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="landing_zone_5" type="StaticBody2D" parent="landing_zones" index="4"]
+
+position = Vector2( -123.594, 202.092 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_5" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="landing_zone_6" type="StaticBody2D" parent="landing_zones" index="5"]
+
+position = Vector2( -88.5201, -200.422 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_6" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="landing_zone_7" type="StaticBody2D" parent="landing_zones" index="6"]
+
+position = Vector2( 330.695, -225.475 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_7" index="0"]
+
+shape = SubResource( 1 )
+
+
