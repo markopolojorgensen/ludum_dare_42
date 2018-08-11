@@ -1,6 +1,7 @@
 extends Node
 
 signal dashing
+signal done_dashing
 
 export(NodePath) var body_path
 onready var body = get_node(body_path)
@@ -37,6 +38,8 @@ func _unhandled_input(event):
 		dashing = false
 		
 		lzd.dash_end()
+		
+		emit_signal("done_dashing")
 		
 		body.set_collision_mask_bit(0, true)
 		body.set_collision_mask_bit(3, true)

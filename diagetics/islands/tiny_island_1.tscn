@@ -46,6 +46,8 @@ shape = SubResource( 1 )
 
 [node name="water_hazards" type="Node2D" parent="." index="2"]
 
+visible = false
+
 [node name="area_2d" type="Area2D" parent="water_hazards" index="0"]
 
 input_pickable = true

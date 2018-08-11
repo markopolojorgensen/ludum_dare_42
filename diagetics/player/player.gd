@@ -5,6 +5,8 @@ var resetting = false
 
 func _ready():
 	$dash.connect("dashing", self, "dashing")
+	$dash.connect("dashing", $player_sprite, "dashing")
+	$dash.connect("done_dashing", $player_sprite, "done_dashing")
 
 func _integrate_forces(state):
 	$movement.do_movement(state)
@@ -32,4 +34,7 @@ func got_wet(water):
 	
 	set_physics_process(true)
 	resetting = false
+
+func set_target(new_target):
+	$attack.target = new_target
 

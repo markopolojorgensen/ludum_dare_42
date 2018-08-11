@@ -28,10 +28,13 @@ Game Todo
     projectiles probably slow down as they move if that makes it easier to reflect them
       or just bigger window for reflecting them
 
+  random stuff lying on the ground on the islands you can hit towards the boss.
+
   player
     health
     reflect / attack button
       cooldown?
+      further from the boss, farther it travels?
     dash cooldown?
       focus to restore health?
         can't move while focusing

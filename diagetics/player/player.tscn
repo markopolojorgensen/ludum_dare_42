@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://diagetics/player/player.gd" type="Script" id=1]
 [ext_resource path="res://systems/health/health.tscn" type="PackedScene" id=2]
@@ -6,11 +6,67 @@
 [ext_resource path="res://diagetics/player/intended_direction.gd" type="Script" id=4]
 [ext_resource path="res://systems/movement/dash.gd" type="Script" id=5]
 [ext_resource path="res://diagetics/player/island_detector_area.gd" type="Script" id=6]
+[ext_resource path="res://diagetics/player/attack.gd" type="Script" id=7]
+[ext_resource path="res://diagetics/player/frames/prota_dash_1.png" type="Texture" id=8]
+[ext_resource path="res://diagetics/player/frames/prota_dash_2.png" type="Texture" id=9]
+[ext_resource path="res://diagetics/player/frames/prota_run_1.png" type="Texture" id=10]
+[ext_resource path="res://diagetics/player/frames/prota_run_2.png" type="Texture" id=11]
+[ext_resource path="res://diagetics/player/frames/prota_run_3.png" type="Texture" id=12]
+[ext_resource path="res://diagetics/player/frames/prota_run_4.png" type="Texture" id=13]
+[ext_resource path="res://diagetics/player/frames/prota_run_5.png" type="Texture" id=14]
+[ext_resource path="res://diagetics/player/frames/prota_run_6.png" type="Texture" id=15]
+[ext_resource path="res://diagetics/player/frames/prota_run_7.png" type="Texture" id=16]
+[ext_resource path="res://diagetics/player/frames/prota_run_8.png" type="Texture" id=17]
+[ext_resource path="res://diagetics/player/frames/prota_stand.png" type="Texture" id=18]
+[ext_resource path="res://diagetics/player/player_sprite.gd" type="Script" id=19]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 5 )
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "attack"
+length = 0.2
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("static_body_2d:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -128 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "dash",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "stand",
+"speed": 5.0
+} ]
 
 [node name="player" type="RigidBody2D" index="0"]
 
@@ -29,7 +85,7 @@ contact_monitor = true
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
-linear_damp = 7.0
+linear_damp = 8.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
@@ -57,6 +113,7 @@ script = ExtResource( 4 )
 
 [node name="dash" type="Node2D" parent="." index="4"]
 
+editor/display_folded = true
 script = ExtResource( 5 )
 body_path = NodePath("..")
 movement_path = NodePath("../movement")
@@ -71,6 +128,7 @@ autostart = false
 
 [node name="island_landing_zone_detector" type="Area2D" parent="." index="5"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -122,5 +180,43 @@ process_mode = 1
 wait_time = 0.05
 one_shot = true
 autostart = false
+
+[node name="attack" type="Node2D" parent="." index="8"]
+
+script = ExtResource( 7 )
+
+[node name="static_body_2d" type="StaticBody2D" parent="attack" index="0"]
+
+position = Vector2( 0, -128 )
+input_pickable = false
+collision_layer = 0
+collision_mask = 16
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="attack/static_body_2d" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="animation_player" type="AnimationPlayer" parent="attack" index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/attack = SubResource( 3 )
+blend_times = [  ]
+
+[node name="player_sprite" type="AnimatedSprite" parent="." index="9"]
+
+scale = Vector2( 4, 4 )
+frames = SubResource( 4 )
+animation = "stand"
+script = ExtResource( 19 )
+_sections_unfolded = [ "Transform" ]
 
 
