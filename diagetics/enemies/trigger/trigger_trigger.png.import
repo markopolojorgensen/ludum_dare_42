@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trigger_trigger.png-83c86739069f8eb462ab26d3fd62ff42.stex"
+path="res://.import/trigger_trigger.png-762e46e8bba82a1dad8063aac3b87b30.stex"
 
 [deps]
 
-source_file="res://diagetics/enemies/trigger_trigger.png"
+source_file="res://diagetics/enemies/trigger/trigger_trigger.png"
 source_md5="f292f156b6f8dbee0441a88dca7210ae"
 
-dest_files=[ "res://.import/trigger_trigger.png-83c86739069f8eb462ab26d3fd62ff42.stex" ]
+dest_files=[ "res://.import/trigger_trigger.png-762e46e8bba82a1dad8063aac3b87b30.stex" ]
 dest_md5="a4dab3fb38578955d6978a4ecc0d3eb6"
 
 [params]

@@ -58,3 +58,9 @@ func set_target(new_target):
 func stop_moving():
 	$movement.stop_moving()
 
+func is_player():
+	return true
+
+func hit_by_pulse():
+	print("OW! player hit by pulse")
+

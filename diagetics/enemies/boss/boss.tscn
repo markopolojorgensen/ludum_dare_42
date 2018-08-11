@@ -1,0 +1,79 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://diagetics/enemies/boss/boss.gd" type="Script" id=1]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss.png" type="Texture" id=2]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_1.png" type="Texture" id=3]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_2.png" type="Texture" id=4]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_3.png" type="Texture" id=5]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_4.png" type="Texture" id=6]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_5.png" type="Texture" id=7]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_6.png" type="Texture" id=8]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_7.png" type="Texture" id=9]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_8.png" type="Texture" id=10]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_9.png" type="Texture" id=11]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_10.png" type="Texture" id=12]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_11.png" type="Texture" id=13]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_12.png" type="Texture" id=14]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_13.png" type="Texture" id=15]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_14.png" type="Texture" id=16]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_15.png" type="Texture" id=17]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_16.png" type="Texture" id=18]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_shadow.png" type="Texture" id=19]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "suck",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 64.0
+
+[node name="boss" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="ring" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+
+[node name="animated_sprite" type="AnimatedSprite" parent="ring" index="0"]
+
+frames = SubResource( 1 )
+animation = "default"
+_sections_unfolded = [ "Transform" ]
+
+[node name="shadow" type="Sprite" parent="ring" index="1"]
+
+modulate = Color( 1, 1, 1, 0.281765 )
+texture = ExtResource( 19 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="hitbox" type="StaticBody2D" parent="." index="1"]
+
+position = Vector2( 2, -30 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="hitbox" index="0"]
+
+shape = SubResource( 2 )
+
+

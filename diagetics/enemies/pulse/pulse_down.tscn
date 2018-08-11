@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://diagetics/enemies/pulse/pulse.gd" type="Script" id=1]
+[ext_resource path="res://diagetics/enemies/pulse/frames/pulse_down17.png" type="Texture" id=2]
+[ext_resource path="res://diagetics/enemies/pulse/frames/pulse_down18.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 55, 20 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "fade"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("normal:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("reflected:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="pulse_down" type="Node2D"]
+
+script = ExtResource( 1 )
+direction = Vector2( 0, 1 )
+flip_horizontally = false
+
+[node name="normal" type="Sprite" parent="." index="0"]
+
+position = Vector2( -2, 0 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="reflected" type="Sprite" parent="." index="1"]
+
+visible = false
+position = Vector2( -2, 0 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="hitbox" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+collision_mask = 20
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="hitbox" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="animation_player" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/fade = SubResource( 2 )
+blend_times = [  ]
+
+[node name="fade_timer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 0.25
+one_shot = true
+autostart = false
+
+[node name="lifetime" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+

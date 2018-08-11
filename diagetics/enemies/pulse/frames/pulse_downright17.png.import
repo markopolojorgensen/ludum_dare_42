@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trigger_shadow.png-057e10070abf56b2362143475b982e2b.stex"
+path="res://.import/pulse_downright17.png-a1c45ece2500c5bd9dd2808571469230.stex"
 
 [deps]
 
-source_file="res://diagetics/enemies/trigger_shadow.png"
-source_md5="6264ccce098d56ab8ed2ffc3c20ba50e"
+source_file="res://diagetics/enemies/pulse/frames/pulse_downright17.png"
+source_md5="6adda8c477bf706b34d5b5d6f3e8ee26"
 
-dest_files=[ "res://.import/trigger_shadow.png-057e10070abf56b2362143475b982e2b.stex" ]
-dest_md5="1ce0a5a29373caeaf4407ae5d9f90d2b"
+dest_files=[ "res://.import/pulse_downright17.png-a1c45ece2500c5bd9dd2808571469230.stex" ]
+dest_md5="5258e80e51c5fbcca10157e840d79527"
 
 [params]
 
