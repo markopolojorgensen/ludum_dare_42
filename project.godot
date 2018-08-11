@@ -25,6 +25,7 @@ dash=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
 2d_physics/layer_1="island_edges"
 2d_physics/layer_2="island_landing_zones"
 2d_physics/layer_3="player"
+2d_physics/layer_4="water"
 
 [node]
 

@@ -29,13 +29,13 @@ Game Todo
       or just bigger window for reflecting them
 
   player
-    dash cooldown?
     health
-      focus to restore health
+    reflect / attack button
+      cooldown?
+    dash cooldown?
+      focus to restore health?
         can't move while focusing
         arena shrinks while focusing
-    reflect / attack button
-      needs a cooldown
 
   training bosses
 
@@ -44,18 +44,19 @@ Game Todo
       (phases)
     moves around
     attacks
-      projectiles
-        expanding circles / waves
-          maybe break up after certain distance
-        not bullets?
+      expanding circles / waves
+        broadcast: sucking animation
+        aoe blast to create shockwave
+        break up after certain distance
       summon wall
       summon mines
   
   arena
-    phases space
-      island
-      series of islands
-      catwalks
+    level generator
+      big islands sections
+      medium island sections
+      small island sections
+      catwalks?
       clouds?
       nothing
     obstacles (walls or something)
@@ -64,7 +65,6 @@ Game Todo
     ghost through walls
     flight
     health packs
-
 
 
 

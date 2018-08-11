@@ -1,5 +1,7 @@
 extends Node
 
+signal dashing
+
 export(NodePath) var body_path
 onready var body = get_node(body_path)
 
@@ -18,7 +20,10 @@ func _unhandled_input(event):
 		
 		lzd.dash_begin()
 		
+		emit_signal("dashing")
+		
 		body.set_collision_mask_bit(0, false)
+		body.set_collision_mask_bit(3, false)
 		
 		movement.max_speed *= 8
 		movement.acceleration *= 8
@@ -34,5 +39,6 @@ func _unhandled_input(event):
 		lzd.dash_end()
 		
 		body.set_collision_mask_bit(0, true)
+		body.set_collision_mask_bit(3, true)
 
 
