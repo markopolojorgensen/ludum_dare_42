@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="tiny_island" type="Node2D"]
+[node name="tiny_island" type="Node2D" index="0"]
 
 [node name="walls" type="Node2D" parent="." index="0"]
 

@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="big_island_1" type="Node2D" index="0"]
+[node name="big_island_1" type="Node2D"]
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
@@ -16,6 +16,8 @@ texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="walls" type="Node2D" parent="." index="1"]
+
+visible = false
 
 [node name="static_body_2d" type="StaticBody2D" parent="walls" index="0"]
 
@@ -50,5 +52,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="collision_shape_2d" type="CollisionShape2D" parent="landing_zones/landing_zone_1" index="0"]
 
 shape = SubResource( 1 )
+
+[node name="water_hazards" type="Node2D" parent="." index="3"]
 
 

@@ -68,8 +68,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="player" type="RigidBody2D"]
+[node name="player" type="RigidBody2D" index="0"]
 
+z_index = 1
 input_pickable = false
 collision_layer = 4
 collision_mask = 9
@@ -89,7 +90,7 @@ linear_damp = 8.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Angular", "Collision", "Linear" ]
+_sections_unfolded = [ "Angular", "Collision", "Linear", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -104,7 +105,7 @@ max_health = 20
 script = ExtResource( 3 )
 body_path = NodePath("..")
 acceleration = 15000
-max_speed = 600
+max_speed = 700
 intended_direction_path = NodePath("../intended_direction")
 
 [node name="intended_direction" type="Node" parent="." index="3"]
@@ -128,7 +129,6 @@ autostart = false
 
 [node name="island_landing_zone_detector" type="Area2D" parent="." index="5"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -146,7 +146,7 @@ intended_direction_path = NodePath("../intended_direction")
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="island_landing_zone_detector" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -0.00173569, 0.268217, -89.319, 144.421, -97.9434, 233.983, 95.1119, 234.646, 91.1314, 142.431 )
+polygon = PoolVector2Array( -0.00173569, 0.268217, -91.5906, 205.661, -97.0056, 304.034, 97.0325, 309.449, 92.52, 196.636 )
 
 [node name="camera_2d" type="Camera2D" parent="." index="6"]
 
@@ -183,6 +183,7 @@ autostart = false
 
 [node name="attack" type="Node2D" parent="." index="8"]
 
+editor/display_folded = true
 script = ExtResource( 7 )
 
 [node name="static_body_2d" type="StaticBody2D" parent="attack" index="0"]

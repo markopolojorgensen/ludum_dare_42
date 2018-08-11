@@ -59,12 +59,15 @@ Game Todo
   
   arena
     level generator
+      start on solid land with ravines -> shoreline -> clouds
       big islands sections
       medium island sections
       small island sections
       catwalks?
       clouds?
       nothing
+    waves
+      wrap when moved offscreen to the left
     obstacles (walls or something)
 
   powerup

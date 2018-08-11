@@ -17,7 +17,6 @@ var dashing = false
 func _unhandled_input(event):
 	if event.is_action_pressed("dash") and not dashing:
 		dashing = true
-		print("dash")
 		
 		lzd.dash_begin()
 		
@@ -43,5 +42,7 @@ func _unhandled_input(event):
 		
 		body.set_collision_mask_bit(0, true)
 		body.set_collision_mask_bit(3, true)
+
+
 
 

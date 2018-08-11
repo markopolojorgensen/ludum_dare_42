@@ -1,47 +1,70 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://diagetics/islands/big_island_1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://diagetics/islands/medium_island_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://diagetics/islands/tiny_island_1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://diagetics/islands/water_hazard.gd" type="Script" id=4]
 
 [node name="island_section_1" type="Node2D"]
 
 __meta__ = {
-"_edit_horizontal_guides_": [ -763.995, 761.867 ],
-"_edit_vertical_guides_": [ -772.089, 773.299 ]
+"_edit_horizontal_guides_": [ -749.119, 754.362 ],
+"_edit_vertical_guides_": [ -747.822, 751.178 ]
 }
 
 [node name="big_island_1" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -2.78943, -351.478 )
+position = Vector2( 4.61304, -365.177 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="medium_island_1" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( -384.952, 348.689 )
+position = Vector2( -325.486, 363.697 )
 
 [node name="tiny_island_1" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 64.1587, 209.213 )
+position = Vector2( 177.209, 266.365 )
 
 [node name="tiny_island_2" parent="." index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 326.946, 218.466 )
+position = Vector2( 463.53, 360.106 )
 
 [node name="tiny_island_3" parent="." index="4" instance=ExtResource( 3 )]
 
-position = Vector2( 169.644, 442.391 )
+position = Vector2( 241.808, 600.015 )
 
-[node name="tiny_island_4" parent="." index="5" instance=ExtResource( 3 )]
+[node name="tiny_island_5" parent="." index="5" instance=ExtResource( 3 )]
 
-position = Vector2( 352.855, 636.706 )
+position = Vector2( 588.232, 651.849 )
 
-[node name="tiny_island_5" parent="." index="6" instance=ExtResource( 3 )]
+[node name="tiny_island_6" parent="." index="6" instance=ExtResource( 3 )]
 
-position = Vector2( 515.709, 407.229 )
+position = Vector2( 645.82, 150.2 )
 
-[node name="tiny_island_6" parent="." index="7" instance=ExtResource( 3 )]
+[node name="tiny_island_7" parent="." index="7" instance=ExtResource( 3 )]
 
-position = Vector2( 621.194, 144.442 )
+position = Vector2( -46.9496, 748.513 )
+
+[node name="water_hazards" type="Node2D" parent="." index="8"]
+
+[node name="area_2d" type="Area2D" parent="water_hazards" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+collision_mask = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="water_hazards/area_2d" index="0"]
+
+position = Vector2( 168.242, 2.74722 )
+build_mode = 0
+polygon = PoolVector2Array( 587.019, 997.472, 588.921, 667.782, 540.168, 667.782, 500.279, 733.156, 422.716, 768.613, 336.29, 738.696, 325.209, 630.109, 369.531, 552.546, 472.578, 514.873, 522.439, 582.463, 537.952, 652.269, 590.029, 654.485, 587.69, 198.66, 480.304, 274.028, 375.04, 432.477, 285.29, 466.826, 227.672, 432.477, 204.403, 377.075, 209.944, 322.782, 109.113, 305.053, 54.8189, 369.319, -43.7961, 354.915, -81.4692, 307.269, -71.4969, 234.139, -40.472, 183.17, 31.5502, 138.848, 91.384, 165.441, 125.733, 237.463, 113.545, 293.973, 214.376, 312.81, 275.318, 249.652, 335.151, 239.679, 399.417, 296.189, 412.714, 362.671, 465.899, 265.164, 385.013, 210.87, 400.525, 94.527, 506.896, 15.8566, 587.145, 92.3028, 581.985, -913.335, -923.5, -915.852, -921.974, -331.396, -880.011, -420.4, -807.699, -512.615, -582.252, -633.712, -352.592, -712.968, -64.166, -750.322, 221.897, -706.124, 444.117, -580.895, 561.486, -403.631, 570.574, -221.168, 483.405, -52.9676, 218.214, 47.7068, -173.607, 67.3196, -515.971, 8.09988, -749.149, -89.9829, -882.394, -173.261, -921.899, -302.876, -918.465, 1012.58, -253.836, 1007.54, -256.354, 851.455, -331.88, 760.824, -251.242, 621.253, -293.242, 533.253, -382.242, 579.253, -523.242, 590.253, -658.242, 588.253, -790.242, 538.253, -856.242, 480.253, -881.242, 380.253, -866.242, 276.253, -812.242, 198.253, -696.242, 126.253, -494.242, 94.2528, -303.242, 91.2528, -203.242, 128.253, -137.442, 274.017, -195.899, 464.418, -281.242, 525.253, -241.249, 617.325, -120.407, 647.535, -103.242, 671.253, -11.2421, 641.253, -21.2421, 587.253, -5.24207, 531.253, 87.7579, 482.253, 156.758, 495.253, 181.758, 545.253, 186.758, 614.253, 167.758, 655.253, 105.758, 711.253, 45.7579, 715.253, -9.24207, 646.253, -99.2421, 681.253, -82.644, 705.438, -111.307, 809.972, -183.481, 858.088, -237.149, 852.536, -237.149, 1007.99 )
 
 

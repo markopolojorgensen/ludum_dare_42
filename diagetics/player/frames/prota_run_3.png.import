@@ -7,10 +7,10 @@ path="res://.import/prota_run_3.png-0681b831b08b90c26ece71253bf586cf.stex"
 [deps]
 
 source_file="res://diagetics/player/frames/prota_run_3.png"
-source_md5="a830a7cf654040948c4f16289f737167"
+source_md5="018bb48191dad02f9a21c789e7192895"
 
 dest_files=[ "res://.import/prota_run_3.png-0681b831b08b90c26ece71253bf586cf.stex" ]
-dest_md5="bff93b00113446a6980ece7b9660fbd3"
+dest_md5="34b5db0ea3379331ef6644ea5ac6f5bf"
 
 [params]
 

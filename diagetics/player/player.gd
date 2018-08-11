@@ -19,7 +19,9 @@ func got_wet(water):
 		return
 	
 	# take damage
+	print("OUCH")
 	# play drowning animation
+	print("GLUBGLUBGLUB")
 	
 	resetting = true
 	set_physics_process(false)
