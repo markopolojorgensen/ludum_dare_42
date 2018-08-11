@@ -24,6 +24,7 @@ Game Todo
       or just bigger window for reflecting them
 
   player
+    dash cooldown?
     health
       focus to restore health
         can't move while focusing

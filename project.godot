@@ -18,6 +18,12 @@ config/icon="res://icon.png"
 dash=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 
+[layer_names]
+
+2d_physics/layer_1="island_edges"
+2d_physics/layer_2="island_landing_zones"
+2d_physics/layer_3="player"
+
 [node]
 
 name_casing=2
