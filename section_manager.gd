@@ -18,7 +18,7 @@ func _ready():
 	$spawn_trigger.connect("body_entered", self, "spawn_section")
 
 func spawn_section(body):
-	print("new section inbound")
+	# print("new section inbound")
 	var index = randi() % sections[section_type].size()
 	var inst = sections[section_type][index].instance()
 	add_child(inst)

@@ -30,22 +30,30 @@ Game Todo
 
   random stuff lying on the ground on the islands you can hit towards the boss.
 
+
+  extensions:
+    player reflect attack:  cooldown?
+    player reflect attack: further from the boss, farther it travels?
+    player: focus to restore health?
+      can't move while focusing?
+      arena shrinks while focusing?
+    player dash cooldown?
+    player dash: don't overdash edges?
+    boss attack: summon wall?
+    level generator:
+      start on solid land with ravines -> shoreline -> clouds -> nothing?
+      catwalks?
+      clouds?
+    walls?
+      powerup: ghost through walls?
+
+
+
   player
     health
       UI
-      focus to restore health?
-        can't move while focusing
-        arena shrinks while focusing
-    reflect / attack button
-      cooldown?
-      further from the boss, farther it travels?
-    dash
-      cooldown?
-      don't overdash edges?
-    splash animation
-
-
-  training bosses
+      death animation
+    splash
 
   boss
     health
@@ -57,7 +65,6 @@ Game Todo
         broadcast: sucking animation
         aoe blast to create shockwave
         break up after certain distance
-      summon wall
       summon mines
   
   arena
@@ -67,18 +74,15 @@ Game Todo
       big islands sections
       medium island sections
       small island sections
-      start on solid land with ravines -> shoreline -> clouds -> nothing?
-      catwalks?
-      clouds?
 
     waves
       wrap when moved offscreen to the left
-    obstacles? (walls or something)
 
-  powerup
-    ghost through walls
+  powerups
     flight
+      animation
     health packs
+      animation
 
 
 sounds

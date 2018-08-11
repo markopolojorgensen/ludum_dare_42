@@ -12,9 +12,12 @@
 custom_solver_bias = 0.0
 extents = Vector2( 400, 1000 )
 
-[node name="game" type="Node"]
+[node name="game" type="Node" index="0"]
 
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 2124.46 ]
+}
 
 [node name="world" type="Node2D" parent="." index="0"]
 

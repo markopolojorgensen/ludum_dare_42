@@ -13,10 +13,12 @@ func _ready():
 
 func fancy_disable():
 	hide()
+	$attack_body.set_collision_layer_bit(4, false)
 	$attack_body.set_collision_mask_bit(4, false)
 
 func fancy_enable():
 	show()
+	$attack_body.set_collision_layer_bit(4, true)
 	$attack_body.set_collision_mask_bit(4, true)
 
 func _unhandled_input(event):
@@ -39,3 +41,6 @@ func can_cast():
 
 func orient():
 	rotation = intended_direction.get_intended_direction().angle() + PI/2
+
+
+

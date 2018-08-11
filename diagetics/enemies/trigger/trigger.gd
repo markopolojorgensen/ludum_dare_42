@@ -17,6 +17,7 @@ func do_trigger():
 		triggered = true
 		emit_signal("triggered")
 		hide()
+		$trigger_area.set_collision_mask_bit(4, false)
 
 func body_entered(body):
 	do_trigger()

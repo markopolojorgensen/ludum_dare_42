@@ -17,9 +17,9 @@ func _ready():
 
 func _process(delta):
 	if reflected:
-		position -= direction * speed * delta
+		position -= direction.normalized() * speed * delta
 	else:
-		position += direction * speed * delta
+		position += direction.normalized() * speed * delta
 
 func reflected():
 	reflected = true

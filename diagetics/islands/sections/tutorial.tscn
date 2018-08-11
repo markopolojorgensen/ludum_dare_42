@@ -10,7 +10,7 @@
 
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_vertical_guides_": [ -770.661, 767.551 ]
+"_edit_vertical_guides_": [ -770.661, 767.551, 4813.33 ]
 }
 
 [node name="hints" type="Node2D" parent="." index="0"]
@@ -130,6 +130,30 @@ position = Vector2( 2102.37, 50.4569 )
 
 position = Vector2( 2438.75, -109.323 )
 
+[node name="tiny_island_4" parent="islands" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 2522.03, 214.535 )
+
+[node name="secret_islands" type="Node2D" parent="islands" index="6"]
+
+editor/display_folded = true
+
+[node name="tiny_island_5" parent="islands/secret_islands" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 2834.78, 210.833 )
+
+[node name="tiny_island_6" parent="islands/secret_islands" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 3115.89, 161.408 )
+
+[node name="tiny_island_7" parent="islands/secret_islands" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 3404.31, 47.7449 )
+
+[node name="big_island_2" parent="islands/secret_islands" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 4113.11, -317.701 )
+
 [node name="triggers" type="Node2D" parent="." index="2"]
 
 [node name="attack_trigger" parent="triggers" index="0" instance=ExtResource( 5 )]
@@ -139,5 +163,9 @@ position = Vector2( 2600.71, -152.163 )
 [node name="reflect_trigger" parent="triggers" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 3095.93, -152.163 )
+
+[node name="begin_trigger" parent="triggers" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 4162.19, -325.62 )
 
 
