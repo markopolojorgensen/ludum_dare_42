@@ -8,7 +8,8 @@ onready var intended_direction = get_node(intended_direction_path)
 
 func _physics_process(delta):
 	# print(body.linear_velocity.angle())
-	rotation = body.linear_velocity.angle() - PI/2
+	if body.linear_velocity.length() > 0.1:
+		rotation = body.linear_velocity.angle() - PI/2
 
 func dash_begin():
 	var zones = get_overlapping_bodies()

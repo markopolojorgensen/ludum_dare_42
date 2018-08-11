@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 500, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 300 )
+
+[node name="big_island_1" type="Node2D"]
+
+[node name="wall" type="StaticBody2D" parent="." index="0"]
+
+position = Vector2( -5.99176, 252.901 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="wall" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="wall4" type="StaticBody2D" parent="." index="1"]
+
+position = Vector2( -12.808, -306.029 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="wall4" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="wall2" type="StaticBody2D" parent="." index="2"]
+
+position = Vector2( 472.758, -32.21 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="wall2" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="wall3" type="StaticBody2D" parent="." index="3"]
+
+position = Vector2( -486.057, -18.5775 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="wall3" index="0"]
+
+shape = SubResource( 2 )
+
+

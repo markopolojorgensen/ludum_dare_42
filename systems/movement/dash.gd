@@ -18,6 +18,8 @@ func _unhandled_input(event):
 		
 		lzd.dash_begin()
 		
+		body.set_collision_mask_bit(0, false)
+		
 		movement.max_speed *= 8
 		movement.acceleration *= 8
 		
@@ -30,5 +32,7 @@ func _unhandled_input(event):
 		dashing = false
 		
 		lzd.dash_end()
+		
+		body.set_collision_mask_bit(0, true)
 
 

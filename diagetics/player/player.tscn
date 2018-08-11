@@ -29,7 +29,7 @@ contact_monitor = true
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
-linear_damp = 6.0
+linear_damp = 7.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
@@ -47,8 +47,8 @@ max_health = 20
 
 script = ExtResource( 3 )
 body_path = NodePath("..")
-acceleration = 10000
-max_speed = 600
+acceleration = 15000
+max_speed = 800
 intended_direction_path = NodePath("../intended_direction")
 
 [node name="intended_direction" type="Node" parent="." index="3"]
@@ -65,7 +65,7 @@ landing_zone_detector_path = NodePath("../island_landing_zone_detector")
 [node name="dash_timer" type="Timer" parent="dash" index="0"]
 
 process_mode = 1
-wait_time = 0.05
+wait_time = 0.06
 one_shot = false
 autostart = false
 
@@ -88,7 +88,7 @@ intended_direction_path = NodePath("../intended_direction")
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="island_landing_zone_detector" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -0.00173569, 0.268217, -79.1274, 233.85, 85.403, 236.294 )
+polygon = PoolVector2Array( -0.00173569, 0.268217, -167.258, 229.674, -175.363, 308.566, 173.169, 309.107, 162.903, 220.488 )
 
 [node name="camera_2d" type="Camera2D" parent="." index="6"]
 
