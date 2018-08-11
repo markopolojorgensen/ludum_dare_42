@@ -12,14 +12,14 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="player" type="RigidBody2D"]
+[node name="player" type="RigidBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 4
 collision_mask = 1
 mode = 2
 mass = 1.0
-friction = 1.0
+friction = 0.1
 bounce = 0.0
 gravity_scale = 0.0
 custom_integrator = false
@@ -88,7 +88,7 @@ intended_direction_path = NodePath("../intended_direction")
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="island_landing_zone_detector" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -0.00173569, 0.268217, -167.258, 229.674, -175.363, 308.566, 173.169, 309.107, 162.903, 220.488 )
+polygon = PoolVector2Array( -0.00173569, 0.268217, -167.258, 229.674, -172.121, 386.919, 174.25, 387.999, 162.903, 220.488 )
 
 [node name="camera_2d" type="Camera2D" parent="." index="6"]
 

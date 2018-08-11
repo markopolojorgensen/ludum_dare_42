@@ -3,3 +3,4 @@
   isolate audio stream
   player movement
   player dash
+  when colliding use intended direction instead of linear_velocity

@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://diagetics/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://diagetics/islands/big_island_1.tscn" type="PackedScene" id=3]
-[ext_resource path="res://diagetics/islands/big_island_2.tscn" type="PackedScene" id=4]
-[ext_resource path="res://diagetics/islands/tiny_island_2.tscn" type="PackedScene" id=5]
 
 [node name="game" type="Node" index="0"]
 
@@ -13,43 +10,5 @@ script = ExtResource( 1 )
 [node name="world" type="Node2D" parent="." index="0"]
 
 [node name="player" parent="world" index="0" instance=ExtResource( 2 )]
-
-[node name="islands" type="Node2D" parent="world" index="1"]
-
-[node name="start_island" parent="world/islands" index="0" instance=ExtResource( 3 )]
-
-position = Vector2( 237.108, 145.055 )
-
-[node name="big_island_2" parent="world/islands" index="1" instance=ExtResource( 4 )]
-
-position = Vector2( 1355.7, 175.739 )
-
-[node name="tiny_island" parent="world/islands" index="2" instance=ExtResource( 5 )]
-
-position = Vector2( 2069.82, 186.897 )
-
-[node name="tiny_island2" parent="world/islands" index="3" instance=ExtResource( 5 )]
-
-position = Vector2( 2322.1, -40.1587 )
-
-[node name="tiny_island3" parent="world/islands" index="4" instance=ExtResource( 5 )]
-
-position = Vector2( 2284.26, 481.229 )
-
-[node name="tiny_island4" parent="world/islands" index="5" instance=ExtResource( 5 )]
-
-position = Vector2( 2603.82, 405.544 )
-
-[node name="tiny_island5" parent="world/islands" index="6" instance=ExtResource( 5 )]
-
-position = Vector2( 2818.26, 233.149 )
-
-[node name="tiny_island6" parent="world/islands" index="7" instance=ExtResource( 5 )]
-
-position = Vector2( 2565.98, -204.143 )
-
-[node name="tiny_island7" parent="world/islands" index="8" instance=ExtResource( 5 )]
-
-position = Vector2( 2809.85, -69.5919 )
 
 

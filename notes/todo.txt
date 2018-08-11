@@ -2,6 +2,10 @@ Tech Debt
   copy logo intro
   resolution shenanigans
 
+  dash stops when you reach the landing zone
+
+  phase transition indicator
+
 Game Todo
   Running out of space
 
