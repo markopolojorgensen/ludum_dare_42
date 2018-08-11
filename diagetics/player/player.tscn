@@ -90,4 +90,30 @@ intended_direction_path = NodePath("../intended_direction")
 build_mode = 0
 polygon = PoolVector2Array( -0.00173569, 0.268217, -79.1274, 233.85, 85.403, 236.294 )
 
+[node name="camera_2d" type="Camera2D" parent="." index="6"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.05
+drag_margin_top = 0.08
+drag_margin_right = 0.05
+drag_margin_bottom = 0.08
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = true
+_sections_unfolded = [ "Drag Margin", "Editor", "Smoothing" ]
+
 
