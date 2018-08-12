@@ -6,6 +6,8 @@ signal done_casting
 export(NodePath) var intended_direction_path
 onready var intended_direction = get_node(intended_direction_path)
 
+var target
+
 var casting = false
 
 func _ready():
@@ -45,7 +47,10 @@ func can_cast():
 	return not get_parent().is_dashing()
 
 func orient():
-	rotation = intended_direction.get_intended_direction().angle() + PI/2
+	if target == null:
+		rotation = intended_direction.get_intended_direction().angle() + PI/2
+	else:
+		rotation = (target.global_position - global_position).angle() + PI/2
 
 
 

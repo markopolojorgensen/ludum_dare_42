@@ -6,14 +6,17 @@ enum behavior {
 	recovering,
 }
 
-var max_health = 300
+var max_health = 50
 var health = max_health
 
-var attack_range = 200
+var attack_range = 300
 var player
 var target
 
 var current_state = chasing
+
+# respect camera limits!
+var limits = [-650, 900]
 
 func _ready():
 	$pulse_attack.parent = get_parent()
@@ -23,8 +26,8 @@ func _integrate_forces(state):
 	update_target()
 	update_speed()
 	
-	if current_state == chasing or current_state == recovering:
-		$movement.do_movement(state)
+	# if current_state == chasing or current_state == recovering:
+	$movement.do_movement(state)
 	
 	var distance = (player.global_position - global_position).length()
 	if current_state == chasing and distance < attack_range:
@@ -55,7 +58,22 @@ func update_target():
 			target = player.global_position
 		recovering:
 			if player != null:
-				target = orbit_point()
+				target = orbit_point() + Vector2(50, 0)
+		attacking:
+			target = global_position + Vector2(100, 0)
+	
+	if global_position.x < player.global_position.x:
+		target.x += 600
+	else:
+		var weight = (global_position.x - player.global_position.x) / 200.0
+		target.x += lerp(600, 0, weight)
+	
+	while target.y > limits[1]:
+		target.y -= 50
+	
+	while target.y < limits[0]:
+		target.y += 50
+
 
 func orbit_point():
 	var direction_to_player = (player.global_position - global_position).normalized()

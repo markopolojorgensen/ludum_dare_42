@@ -1,29 +1,43 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://diagetics/player/player.gd" type="Script" id=1]
-[ext_resource path="res://systems/health/health.tscn" type="PackedScene" id=2]
-[ext_resource path="res://systems/movement/movement.gd" type="Script" id=3]
-[ext_resource path="res://diagetics/player/intended_direction.gd" type="Script" id=4]
-[ext_resource path="res://systems/movement/dash.gd" type="Script" id=5]
-[ext_resource path="res://diagetics/player/island_detector_area.gd" type="Script" id=6]
-[ext_resource path="res://diagetics/player/attack.gd" type="Script" id=7]
-[ext_resource path="res://diagetics/player/attack_body.gd" type="Script" id=8]
-[ext_resource path="res://diagetics/player/frames/prota_attack.png" type="Texture" id=9]
-[ext_resource path="res://diagetics/player/frames/prota_dash_1.png" type="Texture" id=10]
-[ext_resource path="res://diagetics/player/frames/prota_dash_2.png" type="Texture" id=11]
-[ext_resource path="res://diagetics/player/frames/prota_run_1.png" type="Texture" id=12]
-[ext_resource path="res://diagetics/player/frames/prota_run_2.png" type="Texture" id=13]
-[ext_resource path="res://diagetics/player/frames/prota_run_3.png" type="Texture" id=14]
-[ext_resource path="res://diagetics/player/frames/prota_run_4.png" type="Texture" id=15]
-[ext_resource path="res://diagetics/player/frames/prota_run_5.png" type="Texture" id=16]
-[ext_resource path="res://diagetics/player/frames/prota_run_6.png" type="Texture" id=17]
-[ext_resource path="res://diagetics/player/frames/prota_run_7.png" type="Texture" id=18]
-[ext_resource path="res://diagetics/player/frames/prota_run_8.png" type="Texture" id=19]
-[ext_resource path="res://diagetics/player/frames/prota_stand.png" type="Texture" id=20]
-[ext_resource path="res://diagetics/player/frames/prota_cast_1.png" type="Texture" id=21]
-[ext_resource path="res://diagetics/player/frames/prota_cast_2.png" type="Texture" id=22]
-[ext_resource path="res://diagetics/player/player_sprite.gd" type="Script" id=23]
-[ext_resource path="res://diagetics/player/frames/prota_shadow.png" type="Texture" id=24]
+[ext_resource path="res://systems/movement/movement.gd" type="Script" id=2]
+[ext_resource path="res://diagetics/player/intended_direction.gd" type="Script" id=3]
+[ext_resource path="res://systems/movement/dash.gd" type="Script" id=4]
+[ext_resource path="res://diagetics/player/island_detector_area.gd" type="Script" id=5]
+[ext_resource path="res://diagetics/player/attack.gd" type="Script" id=6]
+[ext_resource path="res://diagetics/player/attack_body.gd" type="Script" id=7]
+[ext_resource path="res://diagetics/player/frames/prota_attack.png" type="Texture" id=8]
+[ext_resource path="res://diagetics/player/frames/prota_dash_1.png" type="Texture" id=9]
+[ext_resource path="res://diagetics/player/frames/prota_dash_2.png" type="Texture" id=10]
+[ext_resource path="res://diagetics/player/frames/prota_death_1.png" type="Texture" id=11]
+[ext_resource path="res://diagetics/player/frames/prota_death_2.png" type="Texture" id=12]
+[ext_resource path="res://diagetics/player/frames/prota_death_3.png" type="Texture" id=13]
+[ext_resource path="res://diagetics/player/frames/prota_death_4.png" type="Texture" id=14]
+[ext_resource path="res://diagetics/player/frames/prota_death_5.png" type="Texture" id=15]
+[ext_resource path="res://diagetics/player/frames/prota_death_6.png" type="Texture" id=16]
+[ext_resource path="res://diagetics/player/frames/prota_death_7.png" type="Texture" id=17]
+[ext_resource path="res://diagetics/player/frames/prota_death_8.png" type="Texture" id=18]
+[ext_resource path="res://diagetics/player/frames/prota_death_9.png" type="Texture" id=19]
+[ext_resource path="res://diagetics/player/frames/prota_run_1.png" type="Texture" id=20]
+[ext_resource path="res://diagetics/player/frames/prota_run_2.png" type="Texture" id=21]
+[ext_resource path="res://diagetics/player/frames/prota_run_3.png" type="Texture" id=22]
+[ext_resource path="res://diagetics/player/frames/prota_run_4.png" type="Texture" id=23]
+[ext_resource path="res://diagetics/player/frames/prota_run_5.png" type="Texture" id=24]
+[ext_resource path="res://diagetics/player/frames/prota_run_6.png" type="Texture" id=25]
+[ext_resource path="res://diagetics/player/frames/prota_run_7.png" type="Texture" id=26]
+[ext_resource path="res://diagetics/player/frames/prota_run_8.png" type="Texture" id=27]
+[ext_resource path="res://diagetics/player/frames/prota_stand.png" type="Texture" id=28]
+[ext_resource path="res://diagetics/player/frames/prota_cast_1.png" type="Texture" id=29]
+[ext_resource path="res://diagetics/player/frames/prota_cast_2.png" type="Texture" id=30]
+[ext_resource path="res://diagetics/player/frames/prota_glub_1.png" type="Texture" id=31]
+[ext_resource path="res://diagetics/player/frames/prota_glub_2.png" type="Texture" id=32]
+[ext_resource path="res://diagetics/player/frames/prota_glub_3.png" type="Texture" id=33]
+[ext_resource path="res://diagetics/player/player_sprite.gd" type="Script" id=34]
+[ext_resource path="res://diagetics/player/frames/prota_shadow.png" type="Texture" id=35]
+[ext_resource path="res://diagetics/player/frames/prota_fade.png" type="Texture" id=36]
+[ext_resource path="res://diagetics/player/frames/prota_health_bar_big_Layer1.png" type="Texture" id=37]
+[ext_resource path="res://diagetics/player/frames/prota_health_bar_big_Layer2.png" type="Texture" id=38]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -40,7 +54,7 @@ extents = Vector2( 10, 6 )
 resource_name = "attack"
 length = 0.2
 loop = false
-step = 0.05
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("attack_body:position")
 tracks/0/interp = 1
@@ -48,33 +62,43 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -128 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -256 ) ]
 }
 
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "dash",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": false,
+"name": "death",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "run",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 20 ) ],
+"frames": [ ExtResource( 28 ) ],
 "loop": false,
 "name": "stand",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 29 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "cast",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "glub",
 "speed": 12.0
 } ]
 
@@ -106,25 +130,21 @@ _sections_unfolded = [ "Angular", "Collision", "Linear", "Z Index" ]
 
 shape = SubResource( 1 )
 
-[node name="health" parent="." index="1" instance=ExtResource( 2 )]
+[node name="movement" type="Node" parent="." index="1"]
 
-max_health = 20
-
-[node name="movement" type="Node" parent="." index="2"]
-
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 body_path = NodePath("..")
 acceleration = 15000
 max_speed = 700
 intended_direction_path = NodePath("../intended_direction")
 
-[node name="intended_direction" type="Node" parent="." index="3"]
+[node name="intended_direction" type="Node" parent="." index="2"]
+
+script = ExtResource( 3 )
+
+[node name="dash" type="Node2D" parent="." index="3"]
 
 script = ExtResource( 4 )
-
-[node name="dash" type="Node2D" parent="." index="4"]
-
-script = ExtResource( 5 )
 body_path = NodePath("..")
 movement_path = NodePath("../movement")
 landing_zone_detector_path = NodePath("../island_landing_zone_detector")
@@ -136,7 +156,7 @@ wait_time = 0.06
 one_shot = false
 autostart = false
 
-[node name="island_landing_zone_detector" type="Area2D" parent="." index="5"]
+[node name="island_landing_zone_detector" type="Area2D" parent="." index="4"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -147,7 +167,7 @@ collision_layer = 0
 collision_mask = 2
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 6 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Collision", "Transform" ]
 body_path = NodePath("..")
 intended_direction_path = NodePath("../intended_direction")
@@ -158,16 +178,16 @@ dash_path = NodePath("../dash")
 build_mode = 0
 polygon = PoolVector2Array( -0.00173569, 0.268217, -127.691, 202.051, -138.521, 323.889, 146.67, 329.304, 140.353, 205.661 )
 
-[node name="camera_2d" type="Camera2D" parent="." index="6"]
+[node name="camera_2d" type="Camera2D" parent="." index="5"]
 
 anchor_mode = 1
 rotating = false
 current = true
 zoom = Vector2( 1, 1 )
 limit_left = -10000000
-limit_top = -3000
+limit_top = -700
 limit_right = 10000000
-limit_bottom = 3000
+limit_bottom = 950
 limit_smoothed = false
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
@@ -184,6 +204,13 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Smoothing" ]
 
+[node name="glub_timer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
 [node name="wet_timer" type="Timer" parent="." index="7"]
 
 process_mode = 1
@@ -194,12 +221,13 @@ autostart = false
 [node name="attack" type="Node2D" parent="." index="8"]
 
 position = Vector2( 0, -12 )
-script = ExtResource( 7 )
+script = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 intended_direction_path = NodePath("../intended_direction")
 
 [node name="attack_body" type="Area2D" parent="attack" index="0"]
 
+position = Vector2( 0, -256 )
 input_pickable = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -209,7 +237,7 @@ collision_layer = 16
 collision_mask = 48
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="attack/attack_body" index="0"]
@@ -222,7 +250,7 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( -2, 2 )
 rotation = -1.5708
 scale = Vector2( 4, 4 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="animation_player" type="AnimationPlayer" parent="attack" index="1"]
@@ -248,14 +276,84 @@ position = Vector2( 0, -16 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 4 )
 animation = "stand"
-script = ExtResource( 23 )
+script = ExtResource( 34 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="shadow" type="Sprite" parent="player_sprite" index="0"]
 
 modulate = Color( 1, 1, 1, 0.381216 )
 z_index = -1
-texture = ExtResource( 24 )
+texture = ExtResource( 35 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="fade" type="Sprite" parent="player_sprite" index="1"]
+
+modulate = Color( 1, 1, 1, 0 )
+z_index = -1
+texture = ExtResource( 36 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="tween" type="Tween" parent="player_sprite" index="2"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="hud" type="CanvasLayer" parent="." index="10"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="center_container" type="CenterContainer" parent="hud" index="0"]
+
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -132.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+
+[node name="texture_progress" type="TextureProgress" parent="hud/center_container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 275.0
+margin_right = 132.0
+margin_bottom = 535.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 100.0
+exp_edit = false
+rounded = false
+texture_under = null
+texture_over = ExtResource( 37 )
+texture_progress = ExtResource( 38 )
+fill_mode = 3
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+nine_patch_stretch = false
+_sections_unfolded = [ "Textures" ]
 
 

@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://section_manager.gd" type="Script" id=2]
 [ext_resource path="res://diagetics/waves/waves.gd" type="Script" id=3]
 [ext_resource path="res://diagetics/player/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://diagetics/islands/sections/tutorial.tscn" type="PackedScene" id=5]
-[ext_resource path="res://diagetics/water.png" type="Texture" id=6]
+[ext_resource path="res://diagetics/barrier/lightning_barrier.tscn" type="PackedScene" id=6]
+[ext_resource path="res://diagetics/water.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -72,7 +73,12 @@ position = Vector2( -2669.6, 9.31799 )
 
 [node name="boss_spawn_spot" type="Position2D" parent="world" index="4"]
 
-position = Vector2( 1503.95, -866.809 )
+position = Vector2( 899.745, -302.882 )
+
+[node name="lightning_barrier" parent="world" index="5" instance=ExtResource( 6 )]
+
+position = Vector2( -4098.15, 0.0244141 )
+player_path = NodePath("../player")
 
 [node name="bg" type="CanvasLayer" parent="." index="1"]
 
@@ -85,7 +91,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 [node name="bg" type="Sprite" parent="bg" index="0"]
 
 scale = Vector2( 10, 10 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 

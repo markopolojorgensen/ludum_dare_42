@@ -16,6 +16,7 @@ var sections = {
 
 func _ready():
 	$spawn_trigger.connect("body_entered", self, "spawn_section")
+	hide()
 
 func spawn_section(body):
 	# print("new section inbound")
@@ -26,5 +27,6 @@ func spawn_section(body):
 	
 	$spawn_point.global_position += Vector2(1500, 0)
 	$spawn_trigger.global_position += Vector2(1500, 0)
-	
-	
+
+func activate():
+	show()

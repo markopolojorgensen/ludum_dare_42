@@ -41,7 +41,30 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="dash" type="Label" parent="hints" index="1"]
+[node name="burn" type="Label" parent="hints" index="1"]
+
+modulate = Color( 0.355377, 0, 0.535156, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1204.0
+margin_top = -80.0
+margin_right = -1077.0
+margin_bottom = -66.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "This wall of lightning will instantly kill you"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="dash" type="Label" parent="hints" index="2"]
 
 modulate = Color( 0.355377, 0, 0.535156, 1 )
 anchor_left = 0.0
@@ -64,7 +87,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="attack" type="Label" parent="hints" index="2"]
+[node name="attack" type="Label" parent="hints" index="3"]
 
 modulate = Color( 0.355377, 0, 0.535156, 1 )
 anchor_left = 0.0
@@ -87,7 +110,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="reflect" type="Label" parent="hints" index="3"]
+[node name="reflect" type="Label" parent="hints" index="4"]
 
 modulate = Color( 0.355377, 0, 0.535156, 1 )
 anchor_left = 0.0

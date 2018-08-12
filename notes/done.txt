@@ -6,3 +6,10 @@
   when colliding use intended direction instead of linear_velocity
   broadcast: sucking animation
   boss attack: expanding circles / waves
+  player attack damages boss
+  boss moves around
+  player health ui
+  boss health ui
+  player always targets boss
+  force player to start fight (no further islands until boss appears)
+

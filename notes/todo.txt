@@ -49,27 +49,36 @@ Game Todo
       powerup: ghost through walls?
 
 
+FINISH THE GAME
+  X player death animation
+  X lightning wall stops moving on player death
+  X barrier slowdown on glub
+  player win animation
+  one medium island section
+  one small island section
+  add water mesh to tutorial
+
 
   player
-    health
-      UI
-      death animation
     splash
-    attack damages boss
+    ouch animation
+    player attack doesn't go wonky when standing still?
+    player attack spawns a projectile that flies beyond when player is stuck channeling
 
   boss
     health
       UI
       (phases)
-    moves around
     attacks
-      blast can't hit player after being reflected? might be a bug
+      blast shouldn't hit player after being reflected? might be a bug
       summon mines
+    ouch animation
   
   arena
 
     wall of fire / move-right pressure
-      instantly kills you?
+      particle system?
+      instantly kills you!
     level generator
       big islands sections
       medium island sections
@@ -85,6 +94,12 @@ Game Todo
       animation
 
 
+
+
+
+
+
+
 sounds
   ambient
     waves on the shore
@@ -96,12 +111,15 @@ sounds
     ouch
     drown / splash
     dash
+    death
 
   boss
     hover
     suck
     blast
     ouch
+
+  barrier rumble
 
   music: multiple phases to match the boss?
 

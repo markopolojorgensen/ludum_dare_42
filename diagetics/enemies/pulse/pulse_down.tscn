@@ -98,7 +98,7 @@ autostart = false
 [node name="lifetime" type="Timer" parent="." index="5"]
 
 process_mode = 1
-wait_time = 10.0
+wait_time = 1.0
 one_shot = true
 autostart = true
 

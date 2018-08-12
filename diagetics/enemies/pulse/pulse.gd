@@ -5,7 +5,10 @@ export(int, "vertical", "horizontal", "both") var flip_direction = 0
 
 var reflected = false
 
-var speed = 1000
+var max_speed = 1500
+var min_speed = 0
+var speed = max_speed
+var speed_decay = 1.5
 
 func _ready():
 	$hitbox.connect("body_entered", self, "body_entered")
@@ -20,10 +23,14 @@ func _process(delta):
 		position -= direction.normalized() * speed * delta
 	else:
 		position += direction.normalized() * speed * delta
+		speed -= speed * speed_decay * delta
+		speed = max(speed, min_speed)
 
 func reflected():
 	if reflected:
 		return
+	
+	speed = max_speed
 	
 	reflected = true
 	

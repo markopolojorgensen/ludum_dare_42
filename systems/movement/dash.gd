@@ -15,7 +15,7 @@ onready var lzd = get_node(landing_zone_detector_path)
 var dashing = false
 
 func _unhandled_input(event):
-	if event.is_action_pressed("dash") and not dashing:
+	if event.is_action_pressed("dash") and not dashing and not get_parent().resetting:
 		dashing = true
 		
 		lzd.dash_begin()
