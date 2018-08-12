@@ -6,7 +6,8 @@ enum behavior {
 	recovering,
 }
 
-var health = 300
+var max_health = 300
+var health = max_health
 
 var attack_range = 200
 var player
@@ -86,7 +87,11 @@ func hit_by_player_attack():
 func damage_health(amount):
 	health -= amount
 	
+	var percent = health / float(max_health)
+	$boss_hud/center_container/texture_progress.value = percent * 100.0
 	
+	if health <= 0:
+		print("OMG you win")
 	
 
 

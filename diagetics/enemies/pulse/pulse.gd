@@ -5,7 +5,7 @@ export(int, "vertical", "horizontal", "both") var flip_direction = 0
 
 var reflected = false
 
-var speed = 600
+var speed = 1000
 
 func _ready():
 	$hitbox.connect("body_entered", self, "body_entered")

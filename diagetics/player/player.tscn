@@ -78,7 +78,7 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[node name="player" type="RigidBody2D" index="0"]
+[node name="player" type="RigidBody2D"]
 
 z_index = 2
 input_pickable = false
