@@ -6,6 +6,8 @@ enum behavior {
 	recovering,
 }
 
+var health = 300
+
 var attack_range = 200
 var player
 var target
@@ -76,4 +78,17 @@ func is_enemy():
 	return true
 
 func hit_by_pulse():
-	print("OW! boss hit by pulse")
+	damage_health(10)
+
+func hit_by_player_attack():
+	damage_health(1)
+
+func damage_health(amount):
+	health -= amount
+	
+	
+	
+
+
+
+

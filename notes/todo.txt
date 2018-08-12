@@ -86,11 +86,25 @@ Game Todo
 
 
 sounds
-  waves on the shore
-  footsteps
-  dash
-  splash
-  cast_noise
+  ambient
+    waves on the shore
+
+  player
+    footsteps
+    cast
+    reflection
+    ouch
+    drown / splash
+    dash
+
+  boss
+    hover
+    suck
+    blast
+    ouch
+
+  music: multiple phases to match the boss?
+
 
 
 

@@ -78,7 +78,7 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[node name="player" type="RigidBody2D"]
+[node name="player" type="RigidBody2D" index="0"]
 
 z_index = 2
 input_pickable = false
@@ -206,7 +206,7 @@ gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 collision_layer = 16
-collision_mask = 16
+collision_mask = 48
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 8 )

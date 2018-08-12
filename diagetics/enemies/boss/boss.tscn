@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://diagetics/enemies/boss/boss.gd" type="Script" id=1]
 [ext_resource path="res://diagetics/enemies/boss/frames/boss.png" type="Texture" id=2]
@@ -19,9 +19,8 @@
 [ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_15.png" type="Texture" id=17]
 [ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_16.png" type="Texture" id=18]
 [ext_resource path="res://diagetics/enemies/boss/frames/boss_shadow.png" type="Texture" id=19]
-[ext_resource path="res://systems/health/health.tscn" type="PackedScene" id=20]
-[ext_resource path="res://systems/movement/movement.gd" type="Script" id=21]
-[ext_resource path="res://diagetics/enemies/pulse/pulse_attack.tscn" type="PackedScene" id=22]
+[ext_resource path="res://systems/movement/movement.gd" type="Script" id=20]
+[ext_resource path="res://diagetics/enemies/pulse/pulse_attack.tscn" type="PackedScene" id=21]
 
 [sub_resource type="CircleShape2D" id=2]
 
@@ -94,19 +93,17 @@ modulate = Color( 1, 1, 1, 0.281765 )
 texture = ExtResource( 19 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="health" parent="." index="2" instance=ExtResource( 20 )]
+[node name="movement" type="Node" parent="." index="2"]
 
-[node name="movement" type="Node" parent="." index="3"]
-
-script = ExtResource( 21 )
+script = ExtResource( 20 )
 body_path = NodePath("..")
 acceleration = 10000
 max_speed = 300
 intended_direction_path = NodePath("..")
 
-[node name="pulse_attack" parent="." index="4" instance=ExtResource( 22 )]
+[node name="pulse_attack" parent="." index="3" instance=ExtResource( 21 )]
 
-[node name="recovery_timer" type="Timer" parent="." index="5"]
+[node name="recovery_timer" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 4.0
