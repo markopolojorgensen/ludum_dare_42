@@ -19,6 +19,7 @@ func spawn_wave():
 	var wave_index = randi() % 3
 	
 	var inst = wave_scenes[wave_index].instance()
+	inst.player = player
 	
 	add_child(inst)
 	

@@ -198,15 +198,17 @@ script = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 intended_direction_path = NodePath("../intended_direction")
 
-[node name="attack_body" type="StaticBody2D" parent="attack" index="0"]
+[node name="attack_body" type="Area2D" parent="attack" index="0"]
 
 input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
 collision_layer = 16
 collision_mask = 16
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
+audio_bus_override = false
+audio_bus_name = "Master"
 script = ExtResource( 8 )
 _sections_unfolded = [ "Collision", "Transform" ]
 

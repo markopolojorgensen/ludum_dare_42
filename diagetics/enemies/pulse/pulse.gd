@@ -1,7 +1,7 @@
 extends Node2D
 
 export(Vector2) var direction = Vector2(0, 1)
-export(bool) var flip_horizontally = false
+export(int, "vertical", "horizontal", "both") var flip_direction = 0
 
 var reflected = false
 
@@ -22,18 +22,24 @@ func _process(delta):
 		position += direction.normalized() * speed * delta
 
 func reflected():
+	if reflected:
+		return
+	
 	reflected = true
 	
 	$normal.hide()
 	$reflected.show()
 	
-	if flip_horizontally:
+	if flip_direction == 1 or flip_direction == 2:
 		$reflected.flip_h = true
 		$hitbox.position.x *= -1
-	else:
+	
+	if flip_direction == 0 or flip_direction == 2:
 		$reflected.flip_v = true
 		$hitbox.position.y *= -1
-		
+	
+	# collide with enemies
+	$hitbox.set_collision_mask_bit(5, true)
 
 func body_entered(body):
 	if body.has_method("is_player") and body.is_player() and not reflected:

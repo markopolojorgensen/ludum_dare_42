@@ -8,6 +8,7 @@ var triggered = false
 
 func _ready():
 	$trigger_area.connect("body_entered", self, "body_entered")
+	$trigger_area.connect("area_entered", self, "body_entered")
 	$attack_timer.connect("timeout", self, "do_attack")
 	
 	$pulse_attack.parent = self

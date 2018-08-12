@@ -44,6 +44,7 @@ Game Todo
       start on solid land with ravines -> shoreline -> clouds -> nothing?
       catwalks?
       clouds?
+    islands fade in or something better than just appear
     walls?
       powerup: ghost through walls?
 
@@ -54,6 +55,7 @@ Game Todo
       UI
       death animation
     splash
+    attack damages boss
 
   boss
     health
@@ -68,6 +70,7 @@ Game Todo
       summon mines
   
   arena
+
     wall of fire / move-right pressure
       instantly kills you?
     level generator

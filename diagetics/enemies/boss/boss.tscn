@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://diagetics/enemies/boss/boss.gd" type="Script" id=1]
 [ext_resource path="res://diagetics/enemies/boss/frames/boss.png" type="Texture" id=2]
@@ -19,6 +19,14 @@
 [ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_15.png" type="Texture" id=17]
 [ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_16.png" type="Texture" id=18]
 [ext_resource path="res://diagetics/enemies/boss/frames/boss_shadow.png" type="Texture" id=19]
+[ext_resource path="res://systems/health/health.tscn" type="PackedScene" id=20]
+[ext_resource path="res://systems/movement/movement.gd" type="Script" id=21]
+[ext_resource path="res://diagetics/enemies/pulse/pulse_attack.tscn" type="PackedScene" id=22]
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 64.0
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -34,16 +42,35 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="CircleShape2D" id=2]
+[node name="boss" type="RigidBody2D"]
 
-custom_solver_bias = 0.0
-radius = 64.0
-
-[node name="boss" type="Node2D"]
-
+input_pickable = false
+collision_layer = 32
+collision_mask = 0
+mode = 2
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = 5.0
+angular_velocity = 0.0
+angular_damp = -1.0
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Linear" ]
 
-[node name="ring" type="Sprite" parent="." index="0"]
+[node name="collision_shape_2d" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 2, -30 )
+shape = SubResource( 2 )
+
+[node name="ring" type="Sprite" parent="." index="1"]
 
 scale = Vector2( 4, 4 )
 texture = ExtResource( 2 )
@@ -54,26 +81,36 @@ frames = SubResource( 1 )
 animation = "default"
 _sections_unfolded = [ "Transform" ]
 
+[node name="suck_timer" type="Timer" parent="ring/animated_sprite" index="0"]
+
+process_mode = 1
+wait_time = 1.5
+one_shot = true
+autostart = false
+
 [node name="shadow" type="Sprite" parent="ring" index="1"]
 
 modulate = Color( 1, 1, 1, 0.281765 )
 texture = ExtResource( 19 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="hitbox" type="StaticBody2D" parent="." index="1"]
+[node name="health" parent="." index="2" instance=ExtResource( 20 )]
 
-position = Vector2( 2, -30 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Transform" ]
+[node name="movement" type="Node" parent="." index="3"]
 
-[node name="collision_shape_2d" type="CollisionShape2D" parent="hitbox" index="0"]
+script = ExtResource( 21 )
+body_path = NodePath("..")
+acceleration = 10000
+max_speed = 300
+intended_direction_path = NodePath("..")
 
-shape = SubResource( 2 )
+[node name="pulse_attack" parent="." index="4" instance=ExtResource( 22 )]
+
+[node name="recovery_timer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 4.0
+one_shot = true
+autostart = false
 
 
