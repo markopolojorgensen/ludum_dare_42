@@ -63,10 +63,7 @@ Game Todo
       (phases)
     moves around
     attacks
-      expanding circles / waves
-        broadcast: sucking animation
-        aoe blast to create shockwave
-        break up after certain distance
+      blast can't hit player after being reflected? might be a bug
       summon mines
   
   arena

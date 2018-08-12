@@ -4,3 +4,5 @@
   player movement
   player dash
   when colliding use intended direction instead of linear_velocity
+  broadcast: sucking animation
+  boss attack: expanding circles / waves

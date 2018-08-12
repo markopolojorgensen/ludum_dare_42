@@ -19,3 +19,4 @@ func _process(delta):
 
 func animation_finished(name):
 	queue_free()
+

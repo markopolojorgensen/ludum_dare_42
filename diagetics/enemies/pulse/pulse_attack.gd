@@ -9,6 +9,9 @@ var scenes = [
 	preload("res://diagetics/enemies/pulse/pulse_up.tscn"),
 	preload("res://diagetics/enemies/pulse/pulse_right.tscn"),
 	preload("res://diagetics/enemies/pulse/pulse_up_right.tscn"),
+	preload("res://diagetics/enemies/pulse/pulse_up_left.tscn"),
+	preload("res://diagetics/enemies/pulse/pulse_down_right.tscn"),
+	preload("res://diagetics/enemies/pulse/pulse_down_left.tscn"),
 ]
 
 func attack():
