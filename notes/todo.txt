@@ -47,45 +47,32 @@ Game Todo
     islands fade in or something better than just appear
     walls?
       powerup: ghost through walls?
+    wall of death particle system?
 
 
-FINISH THE GAME
-  X player death animation
-  X lightning wall stops moving on player death
-  X barrier slowdown on glub
-  player win animation
-  one medium island section
-  one small island section
-  add water mesh to tutorial
-
+  Priorities
+    island art
+    music & sfx
+    pause / quit buttons
+    reflect tutorial countdown
+    player ouch animation
+    boss ouch animation
+    more island sections
 
   player
-    splash
-    ouch animation
     player attack doesn't go wonky when standing still?
     player attack spawns a projectile that flies beyond when player is stuck channeling
 
   boss
-    health
-      UI
-      (phases)
     attacks
       blast shouldn't hit player after being reflected? might be a bug
       summon mines
-    ouch animation
   
   arena
-
-    wall of fire / move-right pressure
-      particle system?
-      instantly kills you!
     level generator
       big islands sections
       medium island sections
       small island sections
-
-    waves
-      wrap when moved offscreen to the left
 
   powerups
     flight
@@ -93,31 +80,25 @@ FINISH THE GAME
     health packs
       animation
 
-
-
-
-
-
-
-
-sounds
+Sounds
   ambient
     waves on the shore
 
   player
-    footsteps
+    ouch
     cast
     reflection
-    ouch
     drown / splash
     dash
     death
+    footsteps
 
   boss
     hover
     suck
     blast
     ouch
+    death
 
   barrier rumble
 

@@ -15,7 +15,7 @@ var scenes = [
 ]
 
 func attack():
-	print("rar")
+	# print("rar")
 	for scene in scenes:
 		render_attack(scene)
 

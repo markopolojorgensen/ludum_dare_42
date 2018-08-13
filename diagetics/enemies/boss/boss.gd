@@ -1,12 +1,19 @@
 extends Node2D
 
+signal boss_death
+signal phase_1_end
+signal phase_2_end
+
 enum behavior {
 	chasing,
 	attacking,
 	recovering,
+	dead,
 }
 
-var max_health = 50
+var phase = 1
+
+var max_health = 150
 var health = max_health
 
 var attack_range = 300
@@ -14,6 +21,8 @@ var player
 var target
 
 var current_state = chasing
+
+var glubbing = false
 
 # respect camera limits!
 var limits = [-650, 900]
@@ -23,6 +32,9 @@ func _ready():
 	$pulse_attack.location = self
 
 func _integrate_forces(state):
+	if current_state == dead:
+		return
+	
 	update_target()
 	update_speed()
 	
@@ -30,21 +42,22 @@ func _integrate_forces(state):
 	$movement.do_movement(state)
 	
 	var distance = (player.global_position - global_position).length()
-	if current_state == chasing and distance < attack_range:
+	if current_state == chasing and distance < attack_range and not glubbing:
 		current_state = attacking
 		pulse_attack()
 
 func pulse_attack():
 	# print("slurp")
-	$ring/animated_sprite.play("suck")
-	$ring/animated_sprite/suck_timer.start()
+	$ring/inner_ring.play("suck")
+	$ring/inner_ring/suck_timer.start()
 	
-	yield($ring/animated_sprite/suck_timer, "timeout")
-	# print("kaboom")
+	yield($ring/inner_ring/suck_timer, "timeout")
+	if current_state == dead:
+		return # don't finish attack if dying
 	$pulse_attack.attack()
 	
 	current_state = recovering
-	$ring/animated_sprite.play("default")
+	$ring/inner_ring.play("default")
 	
 	$recovery_timer.start()
 	yield($recovery_timer, "timeout")
@@ -97,6 +110,7 @@ func is_enemy():
 	return true
 
 func hit_by_pulse():
+	# print("boss hit by pulse")
 	damage_health(10)
 
 func hit_by_player_attack():
@@ -108,10 +122,26 @@ func damage_health(amount):
 	var percent = health / float(max_health)
 	$boss_hud/center_container/texture_progress.value = percent * 100.0
 	
-	if health <= 0:
-		print("OMG you win")
+	if phase == 1 and percent < 0.67:
+		phase = 2
+		emit_signal("phase_1_end")
+	elif phase == 2 and percent < 0.33:
+		phase = 3
+		emit_signal("phase_2_end")
 	
+	if health <= 0 and current_state != dead:
+		current_state = dead
+		
+		$ring.play("death")
+		$animation_player.play("death")
+		$camera_2d.current = true
+		emit_signal("boss_death")
 
+func glub_start():
+	glubbing = true
+
+func glub_end():
+	glubbing = false
 
 
 

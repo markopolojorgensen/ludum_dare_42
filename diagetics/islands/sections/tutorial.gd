@@ -28,3 +28,4 @@ func reflect_tutorial_complete():
 
 func begin_fight():
 	emit_signal("begin_fight")
+	$hints/begin.hide()

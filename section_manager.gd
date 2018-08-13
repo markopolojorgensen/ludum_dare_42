@@ -7,10 +7,10 @@ var sections = {
 		preload("res://diagetics/islands/sections/island_section_1.tscn"),
 	],
 	"medium": [
-		preload("res://diagetics/islands/sections/island_section_1.tscn"),
+		preload("res://diagetics/islands/sections/island_section_medium_1.tscn"),
 	],
 	"small": [
-		preload("res://diagetics/islands/sections/island_section_1.tscn"),
+		preload("res://diagetics/islands/sections/island_section_small_1.tscn"),
 	],
 }
 

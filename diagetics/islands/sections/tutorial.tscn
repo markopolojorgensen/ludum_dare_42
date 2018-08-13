@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://diagetics/islands/sections/tutorial.gd" type="Script" id=1]
 [ext_resource path="res://diagetics/islands/big_island_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://diagetics/islands/medium_island_1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://diagetics/islands/tiny_island_1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://diagetics/enemies/trigger/trigger.tscn" type="PackedScene" id=5]
+[ext_resource path="res://diagetics/islands/water_hazard.gd" type="Script" id=6]
 
-[node name="tutorial" type="Node2D"]
+[node name="tutorial" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -15,6 +16,7 @@ __meta__ = {
 
 [node name="hints" type="Node2D" parent="." index="0"]
 
+editor/display_folded = true
 z_index = 2
 _sections_unfolded = [ "Z Index" ]
 
@@ -117,9 +119,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 3002.0
+margin_left = 2872.0
 margin_top = -64.0
-margin_right = 3189.0
+margin_right = 3059.0
 margin_bottom = -50.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -131,9 +133,36 @@ text = "X also reflects enemy attacks"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="begin" type="Label" parent="hints" index="5"]
+
+modulate = Color( 0.355377, 0, 0.535156, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4072.0
+margin_top = -269.0
+margin_right = 4259.0
+margin_bottom = -255.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Attack to begin"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
 
 [node name="islands" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="big_island_1" parent="islands" index="0" instance=ExtResource( 2 )]
 
@@ -159,8 +188,6 @@ position = Vector2( 2522.03, 214.535 )
 
 [node name="secret_islands" type="Node2D" parent="islands" index="6"]
 
-editor/display_folded = true
-
 [node name="tiny_island_5" parent="islands/secret_islands" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 2834.78, 210.833 )
@@ -179,16 +206,52 @@ position = Vector2( 4113.11, -317.701 )
 
 [node name="triggers" type="Node2D" parent="." index="2"]
 
+editor/display_folded = true
+
 [node name="attack_trigger" parent="triggers" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 2600.71, -152.163 )
 
 [node name="reflect_trigger" parent="triggers" index="1" instance=ExtResource( 5 )]
 
-position = Vector2( 3095.93, -152.163 )
+position = Vector2( 2960.71, -152.163 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="begin_trigger" parent="triggers" index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 4162.19, -325.62 )
+
+[node name="water_hazards" type="Node2D" parent="." index="3"]
+
+[node name="area_2d" type="Area2D" parent="water_hazards" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+collision_mask = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="water_hazards/area_2d" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -1197.5, -918.701, 771.984, -930.085, 760.6, -0.366455, 629.361, -291.954, -0.0020752, -460.087, -697.527, -166.99, -781.594, 44.3123, -688.439, 271.519, 36.3511, 496.454, 695.251, 344.225, 756.805, 29.9917, 768.189, 1149.45, -1258.22, 1172.22 )
+
+[node name="collision_polygon_2d3" type="CollisionPolygon2D" parent="water_hazards/area_2d" index="1"]
+
+position = Vector2( 4118.7, -300.232 )
+build_mode = 0
+polygon = PoolVector2Array( -1381.31, -884.032, 771.984, -930.085, 760.6, -0.366455, 629.361, -291.954, -0.0020752, -460.087, -697.527, -166.99, -781.594, 44.3123, -710.923, 219.065, -814.474, 299.233, -874.6, 339.318, -1018.8, 330.444, -1092.33, 399.677, -1093.39, 529.718, -1161.87, 526.378, -1173.64, 416.885, -1229.08, 376.297, -1317.6, 408.03, -1382.74, 481.518, -1368.97, 641.62, -1208.64, 623.248, -1160.2, 543.079, -1093.39, 541.409, -1036.61, 576.483, -962.957, 594.424, -896.908, 537.051, -872.93, 356.019, -817.814, 320.946, -794.432, 472.932, -632.424, 466.251, -574.761, 306.798, 36.3511, 496.454, 695.251, 344.225, 756.805, 29.9917, 750.719, 1371.9, -1407.12, 1444.17 )
+
+[node name="collision_polygon_2d2" type="CollisionPolygon2D" parent="water_hazards/area_2d" index="2"]
+
+position = Vector2( 1969.49, -18.9739 )
+build_mode = 0
+polygon = PoolVector2Array( -1197.5, -918.701, 771.984, -930.085, 760.6, -0.366455, 642.201, 113.363, 514.078, 123.915, 443.233, 246.009, 242.757, 194.76, 375.403, 33.4745, 577.386, 45.5332, 590.952, -222.773, 394.998, -224.28, 360.134, 32.0602, 233.713, 184.208, 265.367, -46.4144, 55.8474, -50.9363, 21.1785, 158.583, -122.018, 125.422, -215.473, 68.1432, -106.945, -1.19427, -82.8276, -194.133, -304.406, -200.163, -312.903, -13.2281, -230.547, 69.6506, -316.465, 65.1285, -417.178, 58.9027, -412.634, -172.848, -826.15, -202.385, -1114.7, -113.774, -1189.68, 90.7117, -1146.51, 315.646, -494.428, 327.007, -405.818, 81.6234, -219.995, 77.1873, -125.033, 137.481, 229.191, 202.296, 450.77, 264.097, 455.292, 347, 676.87, 356.045, 654.26, 126.929, 756.805, 29.9917, 768.189, 1149.45, -1258.22, 1172.22 )
 
 

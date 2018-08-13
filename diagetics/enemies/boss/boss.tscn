@@ -1,34 +1,82 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://diagetics/enemies/boss/boss.gd" type="Script" id=1]
 [ext_resource path="res://diagetics/enemies/boss/frames/boss.png" type="Texture" id=2]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_1.png" type="Texture" id=3]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_2.png" type="Texture" id=4]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_3.png" type="Texture" id=5]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_4.png" type="Texture" id=6]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_5.png" type="Texture" id=7]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_6.png" type="Texture" id=8]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_7.png" type="Texture" id=9]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_8.png" type="Texture" id=10]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_9.png" type="Texture" id=11]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_10.png" type="Texture" id=12]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_11.png" type="Texture" id=13]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_12.png" type="Texture" id=14]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_13.png" type="Texture" id=15]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_14.png" type="Texture" id=16]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_15.png" type="Texture" id=17]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_16.png" type="Texture" id=18]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_shadow.png" type="Texture" id=19]
-[ext_resource path="res://systems/movement/movement.gd" type="Script" id=20]
-[ext_resource path="res://diagetics/enemies/pulse/pulse_attack.tscn" type="PackedScene" id=21]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_health_bar_big_behing.png" type="Texture" id=22]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_health_bar_big_fronto.png" type="Texture" id=23]
-[ext_resource path="res://diagetics/enemies/boss/frames/boss_health_bar_big_filler.png" type="Texture" id=24]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_1.png" type="Texture" id=3]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_2.png" type="Texture" id=4]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_3.png" type="Texture" id=5]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_4.png" type="Texture" id=6]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_5.png" type="Texture" id=7]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_6.png" type="Texture" id=8]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_7.png" type="Texture" id=9]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_8.png" type="Texture" id=10]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_9.png" type="Texture" id=11]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_10.png" type="Texture" id=12]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_11.png" type="Texture" id=13]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_12.png" type="Texture" id=14]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_13.png" type="Texture" id=15]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_14.png" type="Texture" id=16]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_15.png" type="Texture" id=17]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_16.png" type="Texture" id=18]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_17.png" type="Texture" id=19]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_18.png" type="Texture" id=20]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_19.png" type="Texture" id=21]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_20.png" type="Texture" id=22]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_21.png" type="Texture" id=23]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_22.png" type="Texture" id=24]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_23.png" type="Texture" id=25]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_24.png" type="Texture" id=26]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_25.png" type="Texture" id=27]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_26.png" type="Texture" id=28]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_27.png" type="Texture" id=29]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_28.png" type="Texture" id=30]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_29.png" type="Texture" id=31]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_30.png" type="Texture" id=32]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_31.png" type="Texture" id=33]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_32.png" type="Texture" id=34]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_33.png" type="Texture" id=35]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_death_34.png" type="Texture" id=36]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_1.png" type="Texture" id=37]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_2.png" type="Texture" id=38]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_3.png" type="Texture" id=39]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_4.png" type="Texture" id=40]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_5.png" type="Texture" id=41]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_6.png" type="Texture" id=42]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_7.png" type="Texture" id=43]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_8.png" type="Texture" id=44]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_9.png" type="Texture" id=45]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_10.png" type="Texture" id=46]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_11.png" type="Texture" id=47]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_12.png" type="Texture" id=48]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_13.png" type="Texture" id=49]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_14.png" type="Texture" id=50]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_15.png" type="Texture" id=51]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_suck_16.png" type="Texture" id=52]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_shadow.png" type="Texture" id=53]
+[ext_resource path="res://systems/movement/movement.gd" type="Script" id=54]
+[ext_resource path="res://diagetics/enemies/pulse/pulse_attack.tscn" type="PackedScene" id=55]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_health_bar_big_behing.png" type="Texture" id=56]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_health_bar_big_fronto.png" type="Texture" id=57]
+[ext_resource path="res://diagetics/enemies/boss/frames/boss_health_bar_big_filler.png" type="Texture" id=58]
 
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 64.0
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
+"loop": false,
+"name": "death",
+"speed": 15.0
+} ]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -38,11 +86,42 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
 "loop": false,
 "name": "suck",
 "speed": 10.0
 } ]
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "death"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 2, 2.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ring/shadow:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.8, 2.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.281765 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [node name="boss" type="RigidBody2D"]
 
@@ -65,26 +144,27 @@ linear_damp = 5.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Linear" ]
+_sections_unfolded = [ "Collision", "Linear", "Visibility" ]
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="." index="0"]
 
 position = Vector2( -0.205261, -0.596405 )
 shape = SubResource( 2 )
 
-[node name="ring" type="Sprite" parent="." index="1"]
+[node name="ring" type="AnimatedSprite" parent="." index="1"]
 
 position = Vector2( -2.20526, 29.4036 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 2 )
+frames = SubResource( 3 )
+animation = "default"
 
-[node name="animated_sprite" type="AnimatedSprite" parent="ring" index="0"]
+[node name="inner_ring" type="AnimatedSprite" parent="ring" index="0"]
 
 frames = SubResource( 1 )
 animation = "default"
 _sections_unfolded = [ "Transform" ]
 
-[node name="suck_timer" type="Timer" parent="ring/animated_sprite" index="0"]
+[node name="suck_timer" type="Timer" parent="ring/inner_ring" index="0"]
 
 process_mode = 1
 wait_time = 1.5
@@ -94,18 +174,18 @@ autostart = false
 [node name="shadow" type="Sprite" parent="ring" index="1"]
 
 modulate = Color( 1, 1, 1, 0.281765 )
-texture = ExtResource( 19 )
+texture = ExtResource( 53 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="movement" type="Node" parent="." index="2"]
 
-script = ExtResource( 20 )
+script = ExtResource( 54 )
 body_path = NodePath("..")
 acceleration = 10000
 max_speed = 300
 intended_direction_path = NodePath("..")
 
-[node name="pulse_attack" parent="." index="3" instance=ExtResource( 21 )]
+[node name="pulse_attack" parent="." index="3" instance=ExtResource( 55 )]
 
 [node name="recovery_timer" type="Timer" parent="." index="4"]
 
@@ -159,12 +239,48 @@ page = 0.0
 value = 100.0
 exp_edit = false
 rounded = false
-texture_under = ExtResource( 22 )
-texture_over = ExtResource( 23 )
-texture_progress = ExtResource( 24 )
+texture_under = ExtResource( 56 )
+texture_over = ExtResource( 57 )
+texture_progress = ExtResource( 58 )
 radial_fill_degrees = 360.0
 radial_center_offset = Vector2( 0, 0 )
 nine_patch_stretch = false
 _sections_unfolded = [ "Textures" ]
+
+[node name="animation_player" type="AnimationPlayer" parent="." index="6"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/death = SubResource( 4 )
+blend_times = [  ]
+
+[node name="camera_2d" type="Camera2D" parent="." index="7"]
+
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -700
+limit_right = 10000000
+limit_bottom = 950
+limit_smoothed = true
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = true
+smoothing_speed = 3.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.01
+drag_margin_top = 0.01
+drag_margin_right = 0.01
+drag_margin_bottom = 0.0
+editor_draw_screen = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Smoothing" ]
 
 

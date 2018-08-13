@@ -36,6 +36,17 @@ func activate():
 func player_death():
 	active = false
 
+func boss_death():
+	active = false
+	$hitbox/collision_shape_2d.disabled = true
+	# player.get_camera().limit_left = -10000000
+	$animated_sprite.hide()
+	$animated_sprite2.hide()
+	$animated_sprite_bot.hide()
+	$animated_sprite_bot2.hide()
+	$animated_sprite_top.hide()
+	$animated_sprite_top2.hide()
+
 func _process(delta):
 	# stay vertically aligned with player
 	global_position.y = player.global_position.y

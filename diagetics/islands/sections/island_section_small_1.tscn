@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://diagetics/islands/tiny_island_1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://diagetics/islands/water_hazard.gd" type="Script" id=2]
+
+[node name="island_section_small_1" type="Node2D"]
+
+__meta__ = {
+"_edit_horizontal_guides_": [ -749.119, 754.362 ],
+"_edit_vertical_guides_": [ -747.822, 751.178 ]
+}
+
+[node name="tiny_island_1" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 578.089, -325.753 )
+
+[node name="tiny_island_2" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 534.021, -9.97141 )
+
+[node name="tiny_island_3" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 241.808, 600.015 )
+
+[node name="tiny_island_5" parent="." index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 192.979, -50.5429 )
+
+[node name="tiny_island_6" parent="." index="4" instance=ExtResource( 1 )]
+
+position = Vector2( -303.29, 248.384 )
+
+[node name="tiny_island_7" parent="." index="5" instance=ExtResource( 1 )]
+
+position = Vector2( -99.8179, 537.04 )
+
+[node name="tiny_island_8" parent="." index="6" instance=ExtResource( 1 )]
+
+position = Vector2( -612.448, 353.26 )
+
+[node name="tiny_island_9" parent="." index="7" instance=ExtResource( 1 )]
+
+position = Vector2( -631.097, -327.468 )
+
+[node name="tiny_island_10" parent="." index="8" instance=ExtResource( 1 )]
+
+position = Vector2( -417.027, -160.316 )
+
+[node name="tiny_island_11" parent="." index="9" instance=ExtResource( 1 )]
+
+position = Vector2( -142.616, -72.2028 )
+
+[node name="tiny_island_12" parent="." index="10" instance=ExtResource( 1 )]
+
+position = Vector2( 214.874, 280.252 )
+
+[node name="tiny_island_13" parent="." index="11" instance=ExtResource( 1 )]
+
+position = Vector2( -130.028, -427.175 )
+
+[node name="tiny_island_14" parent="." index="12" instance=ExtResource( 1 )]
+
+position = Vector2( 174.594, -638.648 )
+
+[node name="tiny_island_15" parent="." index="13" instance=ExtResource( 1 )]
+
+position = Vector2( 552.303, 612.037 )
+
+[node name="water_hazards" type="Node2D" parent="." index="14"]
+
+[node name="area_2d" type="Area2D" parent="water_hazards" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+collision_mask = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="water_hazards/area_2d" index="0"]
+
+position = Vector2( 168.242, 2.74722 )
+build_mode = 0
+polygon = PoolVector2Array( 587.019, 997.472, 588.921, 667.782, 524.055, 657.375, 473.085, 724.965, 385.55, 736.045, 300.232, 666.239, 314.636, 559.868, 368.93, 496.71, 475.301, 464.577, 539.567, 536.599, 534.027, 626.35, 590.029, 654.485, 587.69, 198.66, 176.142, 317.252, 80.9417, 400.761, -30.4186, 382.585, -65.0874, 274.057, 31.5502, 138.848, 141.418, 151.962, 174.527, 301.962, 584.138, 174.175, 579.074, -1051.24, -922.237, -1064.8, -921.974, -331.396, -880.011, -420.4, -742.864, -451.315, -682.57, -375.948, -632.828, -276.464, -504.704, -290.03, -396.175, -407.602, -358.492, -523.667, -245.442, -553.814, -103.752, -617.122, -28.3846, -793.481, 135.855, -725.548, 92.642, -524.994, -49.1863, -507.265, -99.0479, -600.34, -223.148, -542.722, -163.314, -466.268, -212.067, -317.791, -348.355, -293.415, -399.325, -380.949, -487.968, -281.226, -458.051, -153.802, -394.893, -123.886, -296.278, -225.825, -194.339, -184.827, -191.015, -56.2955, -79.1033, -31.9188, -49.1864, -129.426, 62.725, -212.528, 160.232, -110.589, 140.287, -15.2982, 264.387, 31.2391, 302.06, -130.534, 399.567, -149.37, 403.999, -213.636, 320.897, -265.714, 394.324, -453.53, 509.263, -457.404, 570.204, -395.354, 564.664, -284.55, 474.913, -198.124, 421.728, -210.312, 415.08, -141.614, 483.405, -52.9676, 470.481, 76.6685, 351.922, 113.234, 273.251, 45.6435, 133.639, 5.75437, 84.8857, 64.4801, 1.78317, 77.7765, -68.023, 51.1837, -82.4274, -18.6224, -192.123, -38.567, -298.494, 65.5882, -405.22, 31.0339, -447.425, -116.685, -504.704, -30.7671, -672.019, -24.7377, -709.702, -115.178, -662.975, -267.419, -675.034, -348.816, -766.981, -222.199, -893.598, -213.155, -921.899, -302.876, -918.465, 1012.58, -253.836, 1007.54, -108.976, 673.399, -174.046, 598.507, -262.443, 674.627, -375.395, 608.329, -336.107, 458.545, -404.861, 340.682, -483.436, 392.247, -570.605, 295.256, -686.013, 336.999, -768.271, 485.555, -895.076, 442.752, -902.832, 280.979, -748.627, 193.354, -697.062, 316.127, -579.2, 255.968, -560.783, 166.343, -451.515, 108.64, -356.979, 151.611, -338.563, 240.008, -380.306, 330.86, -311.553, 447.495, -245.255, 395.93, -143.353, 433.99, -158.085, 569.041, -103.242, 671.253, -11.2421, 641.253, -21.2421, 587.253, -5.24207, 531.253, 87.7579, 482.253, 156.758, 495.253, 181.758, 545.253, 186.758, 614.253, 167.758, 655.253, 105.758, 711.253, 45.7579, 715.253, -9.24207, 646.253, -99.2421, 681.253, -237.149, 1007.99 )
+
+

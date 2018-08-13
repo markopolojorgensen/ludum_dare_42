@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://diagetics/islands/medium_island_1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://diagetics/islands/tiny_island_1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://diagetics/islands/water_hazard.gd" type="Script" id=3]
+
+[node name="island_section_medium_1" type="Node2D"]
+
+__meta__ = {
+"_edit_horizontal_guides_": [ -749.119, 754.362 ],
+"_edit_vertical_guides_": [ -747.822, 751.178 ]
+}
+
+[node name="medium_island_1" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( -325.486, 363.697 )
+
+[node name="medium_island_2" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 396.997, -364.365 )
+
+[node name="tiny_island_1" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 241.368, 235.68 )
+
+[node name="tiny_island_2" parent="." index="3" instance=ExtResource( 2 )]
+
+position = Vector2( -420.745, -632.96 )
+
+[node name="tiny_island_3" parent="." index="4" instance=ExtResource( 2 )]
+
+position = Vector2( -636.888, -320.524 )
+
+[node name="tiny_island_5" parent="." index="5" instance=ExtResource( 2 )]
+
+position = Vector2( -256.99, -341.217 )
+
+[node name="tiny_island_6" parent="." index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 620.714, 144.621 )
+
+[node name="tiny_island_7" parent="." index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 455.162, 489.089 )
+
+[node name="tiny_island_8" parent="." index="8" instance=ExtResource( 2 )]
+
+position = Vector2( 25.5776, -24.1815 )
+
+[node name="water_hazards" type="Node2D" parent="." index="9"]
+
+[node name="area_2d" type="Area2D" parent="water_hazards" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+collision_mask = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 3 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="water_hazards/area_2d" index="0"]
+
+position = Vector2( 168.242, 2.74722 )
+build_mode = 0
+polygon = PoolVector2Array( 587.019, 997.472, 587.69, 198.66, 480.304, 274.028, 432.728, 386.418, 391.036, 564.427, 294.694, 626.908, 217.068, 607.283, 184.551, 517.552, 225.076, 394.955, 327.599, 354.396, 247.474, 327.198, 169.198, 310.608, 72.0659, 361.28, 12.6069, 337.659, -24.0459, 281.458, -13.4573, 183.718, 94.0576, 77.0173, 182.48, 148.672, 185.201, 220.772, 175.508, 293.676, 415.581, 377.393, 465.899, 265.164, 367.748, 233.895, 364.138, 40.7603, 506.896, 15.8566, 587.145, 92.3028, 581.985, -913.335, -923.5, -915.852, -921.974, -331.396, -880.011, -420.4, -755.669, -458.309, -694.727, -647.783, -619.38, -777.423, -432.123, -730.886, -525.198, -495.983, -713.563, -550.276, -742.372, -437.257, -693.619, -391.827, -682.538, -329.778, -530.738, -350.83, -446.527, -503.739, -308.023, -460.526, -307.228, -311.056, -225.739, -135.671, -101.12, -145.445, -129.569, -242.583, -179.617, -388.88, -94.0934, -551.782, 206.459, -653.595, 424.747, -642.192, 562.399, -595.765, 566.471, -313.946, 496.424, -221.092, 266.733, -132.311, 48.4452, -124.166, -99.795, -230.052, -74.0501, -151.902, 26.4535, 29.776, -137.262, 89.2349, -274.782, 59.1422, -234.893, -115.927, -322.427, -294.32, -402.206, -201.246, -508.577, -269.944, -525.198, -331.994, -685.862, -310.941, -724.644, -218.974, -832.123, -181.301, -921.899, -302.876, -918.465, 1012.58, -253.836, 1007.54, -293.974, 542.318, -380.192, 585.427, -524.488, 605.186, -667.586, 603.988, -796.314, 550.7, -862.774, 484.241, -890.915, 380.06, -874.749, 277.676, -817.869, 190.261, -698.122, 117.215, -494.242, 94.2528, -303.242, 91.2528, -203.242, 128.253, -137.442, 274.017, -195.899, 464.418, -283.197, 538.127, -237.149, 1007.99 )
+
+

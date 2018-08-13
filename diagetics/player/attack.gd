@@ -20,13 +20,11 @@ func body_entered(body):
 
 func fancy_disable():
 	hide()
-	$attack_body.set_collision_layer_bit(4, false)
-	$attack_body.set_collision_mask_bit(4, false)
+	$attack_body/collision_shape_2d.disabled = true
 
 func fancy_enable():
 	show()
-	$attack_body.set_collision_layer_bit(4, true)
-	$attack_body.set_collision_mask_bit(4, true)
+	$attack_body/collision_shape_2d.disabled = false
 
 func _unhandled_input(event):
 	if event.is_action_pressed("attack") and not casting and can_cast():

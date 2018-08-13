@@ -32,7 +32,7 @@
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 100, 600 )
+extents = Vector2( 50, 600 )
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -43,13 +43,14 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[node name="lightning_barrier" type="Node2D" index="0"]
+[node name="lightning_barrier" type="Node2D"]
 
 script = ExtResource( 1 )
 player_path = null
 
 [node name="hitbox" type="Area2D" parent="." index="0"]
 
+position = Vector2( -40, 0 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -57,6 +58,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="hitbox" index="0"]
 

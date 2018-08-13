@@ -7,7 +7,7 @@ signal glub_end
 var previous_good_position
 var resetting = false
 
-var max_health = 10
+var max_health = 50
 var health = max_health
 
 var dead = false
@@ -96,7 +96,7 @@ func take_damage(amount):
 	
 	# update hud
 	var percent = health / float(max_health)
-	$hud/center_container/texture_progress.value = percent * 100.0
+	$hud/center_container/v_box_container/texture_progress.value = percent * 100.0
 	
 	if health <= 0:
 		health = 0

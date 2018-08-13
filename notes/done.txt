@@ -12,4 +12,14 @@
   boss health ui
   player always targets boss
   force player to start fight (no further islands until boss appears)
-
+  player splash animation
+  wall of death
+  player death animation
+  lightning wall stops moving on player death
+  barrier slowdown on glub
+  boss death
+  one medium island section
+  one small island section
+  boss health phases
+  add water mesh to tutorial
+  waves wrap when moved offscreen to the left
