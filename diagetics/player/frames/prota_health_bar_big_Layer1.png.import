@@ -7,10 +7,10 @@ path="res://.import/prota_health_bar_big_Layer1.png-e79300066fc9515ee7a26b09d9f6
 [deps]
 
 source_file="res://diagetics/player/frames/prota_health_bar_big_Layer1.png"
-source_md5="2a3bc2f9cafadf01c78bac2af133a33f"
+source_md5="7d1da5322372ccbc7ed988ee5348b497"
 
 dest_files=[ "res://.import/prota_health_bar_big_Layer1.png-e79300066fc9515ee7a26b09d9f62a08.stex" ]
-dest_md5="28ee19689e028417de30a6ff4dd244bd"
+dest_md5="d84540bdf44ce1cc361f331790e88fcd"
 
 [params]
 

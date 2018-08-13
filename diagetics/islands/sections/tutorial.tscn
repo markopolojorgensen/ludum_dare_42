@@ -7,8 +7,9 @@
 [ext_resource path="res://diagetics/enemies/trigger/trigger.tscn" type="PackedScene" id=5]
 [ext_resource path="res://diagetics/islands/water_hazard.gd" type="Script" id=6]
 
-[node name="tutorial" type="Node2D" index="0"]
+[node name="tutorial" type="Node2D"]
 
+editor/display_folded = true
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_vertical_guides_": [ -770.661, 767.551, 4813.33 ]
