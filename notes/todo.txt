@@ -52,7 +52,7 @@ Game Todo
 
   Priorities
     island art
-    music & sfx
+    X music & sfx
     pause / quit buttons
     reflect tutorial countdown
     player ouch animation
@@ -80,29 +80,31 @@ Game Todo
     health packs
       animation
 
+
+
 Sounds
-  ambient
-    waves on the shore
+  X waves on the shore
+  X barrier rumble
 
   player
-    ouch
-    cast
-    reflection
+    X ouch
+    X cast
+    X reflection
     drown / splash
     dash
     death
     footsteps
 
   boss
-    hover
-    suck
-    blast
+    X roar
+    X hover
+    X suck
+    X blast
     ouch
     death
 
-  barrier rumble
-
-  music: multiple phases to match the boss?
+  X music: multiple phases to match the boss
+    X phase transition
 
 
 
@@ -166,8 +168,8 @@ Sounds
 Publish Hour
   github connection
   copy butlerize
+    upload to itch
   LDJam page
-
 
 
 

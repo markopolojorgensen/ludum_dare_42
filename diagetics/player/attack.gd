@@ -32,6 +32,7 @@ func _unhandled_input(event):
 		fancy_enable()
 		emit_signal("casting")
 		$animation_player.play("attack")
+		$cast.play()
 		orient()
 		
 		$timer.start()

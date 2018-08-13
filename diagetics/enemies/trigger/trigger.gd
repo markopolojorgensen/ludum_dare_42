@@ -6,6 +6,8 @@ export(bool) var attack = false
 
 var triggered = false
 
+var activated = false
+
 func _ready():
 	$trigger_area.connect("body_entered", self, "body_entered")
 	$trigger_area.connect("area_entered", self, "body_entered")
@@ -24,10 +26,14 @@ func body_entered(body):
 	do_trigger()
 
 func _process(delta):
+	if activated:
+		$countdown.text = str(ceil($attack_timer.time_left))
+	
 	set_position(get_position())
 
 func activate_attack_mode():
 	$attack_timer.start()
+	activated = true
 
 func do_attack():
 	$pulse_attack.limited_attack(1)

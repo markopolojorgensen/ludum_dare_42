@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/boss_suck.ogg-f6265b52787f9e28a372fdc8f3af8fe1.oggstr"
+
+[deps]
+
+source_file="res://diagetics/enemies/boss/boss_suck.ogg"
+source_md5="46151e5035f98f6c430c229a7b1c726c"
+
+dest_files=[ "res://.import/boss_suck.ogg-f6265b52787f9e28a372fdc8f3af8fe1.oggstr" ]
+dest_md5="48aa439e63e7e99a7a9b5084380bb905"
+
+[params]
+
+loop=false
+loop_offset=0

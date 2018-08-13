@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/reflect.ogg-b9a10431e01e36451e504ad16d3fcddd.oggstr"
+
+[deps]
+
+source_file="res://diagetics/enemies/pulse/reflect.ogg"
+source_md5="1ae40631c0180be4185385cb6d1861d0"
+
+dest_files=[ "res://.import/reflect.ogg-b9a10431e01e36451e504ad16d3fcddd.oggstr" ]
+dest_md5="ebfeec7dd79e7041a7414007f2123e47"
+
+[params]
+
+loop=false
+loop_offset=0

@@ -37,6 +37,8 @@ func reflected():
 	$normal.hide()
 	$reflected.show()
 	
+	$reflect.play()
+	
 	if flip_direction == 1 or flip_direction == 2:
 		$reflected.flip_h = true
 		$hitbox.position.x *= -1

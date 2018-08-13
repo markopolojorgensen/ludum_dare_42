@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/boss_hover.ogg-764ea85fac3a60bfea3402ae280668f5.oggstr"
+
+[deps]
+
+source_file="res://diagetics/enemies/boss/boss_hover.ogg"
+source_md5="943608c01c5b5c2f7140a387aacf3dd7"
+
+dest_files=[ "res://.import/boss_hover.ogg-764ea85fac3a60bfea3402ae280668f5.oggstr" ]
+dest_md5="0922f4becf5964f8b86e005d47f62236"
+
+[params]
+
+loop=true
+loop_offset=0

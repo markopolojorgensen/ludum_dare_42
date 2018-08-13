@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/player_cast.ogg-69d8af88088044b43d0389025605278d.oggstr"
+
+[deps]
+
+source_file="res://diagetics/player/player_cast.ogg"
+source_md5="67b10606f911789381d6623129a01ce7"
+
+dest_files=[ "res://.import/player_cast.ogg-69d8af88088044b43d0389025605278d.oggstr" ]
+dest_md5="1aeba5b6e0f7adbe5ae4ea630aa10a1b"
+
+[params]
+
+loop=false
+loop_offset=0

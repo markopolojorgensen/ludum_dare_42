@@ -7,10 +7,10 @@ path="res://.import/island_02.png-0366c9a0cefea6d21cb1108e8be7201a.stex"
 [deps]
 
 source_file="res://diagetics/islands/sprites/island_02.png"
-source_md5="d650e8c5066a1d6c57ad96c8b4db01a3"
+source_md5="1ec404337927375a70e1c6b713b6ddcc"
 
 dest_files=[ "res://.import/island_02.png-0366c9a0cefea6d21cb1108e8be7201a.stex" ]
-dest_md5="ffc8a63327aae8b18d493059371a8545"
+dest_md5="efc0da5e23d85a3de001a82ff794c7c8"
 
 [params]
 

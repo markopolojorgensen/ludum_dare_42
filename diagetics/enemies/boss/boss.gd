@@ -13,7 +13,7 @@ enum behavior {
 
 var phase = 1
 
-var max_health = 150
+var max_health = 200
 var health = max_health
 
 var attack_range = 300
@@ -30,6 +30,7 @@ var limits = [-650, 900]
 func _ready():
 	$pulse_attack.parent = get_parent()
 	$pulse_attack.location = self
+	$hover.play()
 
 func _integrate_forces(state):
 	if current_state == dead:
@@ -49,15 +50,20 @@ func _integrate_forces(state):
 func pulse_attack():
 	# print("slurp")
 	$ring/inner_ring.play("suck")
+	$suck.play()
 	$ring/inner_ring/suck_timer.start()
 	
 	yield($ring/inner_ring/suck_timer, "timeout")
+	
+	$ring/inner_ring.play("default")
+	
 	if current_state == dead:
 		return # don't finish attack if dying
+	
 	$pulse_attack.attack()
+	$blast.play()
 	
 	current_state = recovering
-	$ring/inner_ring.play("default")
 	
 	$recovery_timer.start()
 	yield($recovery_timer, "timeout")
@@ -133,9 +139,13 @@ func damage_health(amount):
 		current_state = dead
 		
 		$ring.play("death")
+		$animation_player.stop()
 		$animation_player.play("death")
 		$camera_2d.current = true
 		emit_signal("boss_death")
+		$hover.stop()
+	elif health > 0 and current_state != dead:
+		$animation_player.play("flash")
 
 func glub_start():
 	glubbing = true

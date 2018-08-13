@@ -7,7 +7,7 @@ signal glub_end
 var previous_good_position
 var resetting = false
 
-var max_health = 50
+var max_health = 75
 var health = max_health
 
 var dead = false
@@ -86,12 +86,14 @@ func is_player():
 	return true
 
 func hit_by_pulse():
+	$ouch.play()
 	take_damage(3)
 
 func hit_by_barrier():
 	take_damage(max_health + 1)
 
 func take_damage(amount):
+	$player_sprite/animation_player.play("flash")
 	health -= amount
 	
 	# update hud

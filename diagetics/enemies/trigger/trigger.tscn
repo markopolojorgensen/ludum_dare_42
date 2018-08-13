@@ -20,7 +20,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 24.0
 
-[node name="trigger" type="Node2D" index="0"]
+[node name="trigger" type="Node2D"]
 
 script = ExtResource( 1 )
 attack = false
@@ -66,5 +66,26 @@ process_mode = 1
 wait_time = 4.0
 one_shot = false
 autostart = false
+
+[node name="countdown" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -18.0
+margin_top = -59.0
+margin_right = 22.0
+margin_bottom = -45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 

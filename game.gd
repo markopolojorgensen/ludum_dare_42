@@ -11,9 +11,12 @@ func _ready():
 	
 	$world/player.connect("glub_start", self, "glub_start")
 	$world/player.connect("glub_end", self, "glub_end")
-
+	
 	
 	$win_screen/margin_container.hide()
+	
+	$calm_music.play()
+	$waves.play()
 
 func glub_start():
 	$world/lightning_barrier.glub_start()
@@ -40,6 +43,9 @@ func begin_fight():
 	
 	$world/lightning_barrier.activate()
 	$world/section_manager.activate()
+	
+	$calm_music.stop()
+	$phase_1_music.play()
 
 func player_death():
 	$world/lightning_barrier.player_death()
@@ -56,12 +62,31 @@ func boss_death():
 	yield($win_screen/timer, "timeout")
 	
 	$win_screen/margin_container.show()
+	
+	$tween.interpolate_property($phase_3_music, "volume_db", $phase_3_music.volume_db, -80, 5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	$tween.start()
 
 func start_phase_2():
 	print("phase 2!")
 	$world/section_manager.section_type = "medium"
+	
+	$phase_1_music.stop()
+	$boss_roar.play()
+	
+	# $phase_inbetween_timer.start()
+	# yield($phase_inbetween_timer, "timeout")
+	
+	$phase_2_music.play()
 
 func start_phase_3():
 	print("phase 3!")
 	$world/section_manager.section_type = "small"
+	
+	$phase_2_music.stop()
+	$boss_roar.play()
+	
+	# $phase_inbetween_timer.start()
+	# yield($phase_inbetween_timer, "timeout")
+	
+	$phase_3_music.play()
 

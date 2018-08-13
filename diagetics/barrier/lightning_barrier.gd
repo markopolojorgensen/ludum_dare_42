@@ -29,6 +29,8 @@ func _ready():
 	$animated_sprite_top2.play("burn")
 	
 	player.get_camera().limit_left = global_position.x
+	
+	$rumble.play()
 
 func activate():
 	active = true
@@ -46,6 +48,8 @@ func boss_death():
 	$animated_sprite_bot2.hide()
 	$animated_sprite_top.hide()
 	$animated_sprite_top2.hide()
+	
+	$rumble.stop()
 
 func _process(delta):
 	# stay vertically aligned with player

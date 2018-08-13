@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://section_manager.gd" type="Script" id=2]
@@ -7,6 +7,12 @@
 [ext_resource path="res://diagetics/islands/sections/tutorial.tscn" type="PackedScene" id=5]
 [ext_resource path="res://diagetics/barrier/lightning_barrier.tscn" type="PackedScene" id=6]
 [ext_resource path="res://diagetics/water.png" type="Texture" id=7]
+[ext_resource path="res://pre_fight_music_take_1.ogg" type="AudioStream" id=8]
+[ext_resource path="res://waves.ogg" type="AudioStream" id=9]
+[ext_resource path="res://fight_intro_phase_1.ogg" type="AudioStream" id=10]
+[ext_resource path="res://fight_phase_2.ogg" type="AudioStream" id=11]
+[ext_resource path="res://fight_phase_3.ogg" type="AudioStream" id=12]
+[ext_resource path="res://boss_growl_neat.ogg" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -22,8 +28,6 @@ __meta__ = {
 }
 
 [node name="world" type="Node2D" parent="." index="0"]
-
-editor/display_folded = true
 
 [node name="section_manager" type="Node2D" parent="world" index="0"]
 
@@ -77,7 +81,8 @@ position = Vector2( -2669.6, 9.31799 )
 
 [node name="boss_spawn_spot" type="Position2D" parent="world" index="4"]
 
-position = Vector2( 899.745, -302.882 )
+position = Vector2( 2500, -300 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="lightning_barrier" parent="world" index="5" instance=ExtResource( 6 )]
 
@@ -101,7 +106,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="win_screen" type="CanvasLayer" parent="." index="2"]
 
-editor/display_folded = true
 layer = 4
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -492,5 +496,62 @@ process_mode = 1
 wait_time = 3.0
 one_shot = true
 autostart = false
+
+[node name="calm_music" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 8 )
+volume_db = -25.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="waves" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 9 )
+volume_db = -35.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="phase_1_music" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 10 )
+volume_db = -23.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="phase_2_music" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 11 )
+volume_db = -23.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="phase_3_music" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 12 )
+volume_db = -23.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="boss_roar" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = ExtResource( 13 )
+volume_db = -18.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="tween" type="Tween" parent="." index="9"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
 
 

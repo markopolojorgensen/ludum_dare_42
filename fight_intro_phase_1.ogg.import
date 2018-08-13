@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/fight_intro_phase_1.ogg-4ff8cf43f8dae3f79b441705034742df.oggstr"
+
+[deps]
+
+source_file="res://fight_intro_phase_1.ogg"
+source_md5="862896bfb58f371b511f73fe9dba195b"
+
+dest_files=[ "res://.import/fight_intro_phase_1.ogg-4ff8cf43f8dae3f79b441705034742df.oggstr" ]
+dest_md5="09af2eb9ddbf10a568994b03e37f6d03"
+
+[params]
+
+loop=true
+loop_offset=24.6
