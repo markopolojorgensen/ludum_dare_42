@@ -1,12 +1,16 @@
 require 'optparse'
 
 module BuildMetaData
+  def project_name
+    "a_fight_on_the_waves"
+  end
+
   def project_path
     "/home/mark/fuel/data/games/godot/projects/ludum_dare_42/"
   end
 
   def build_path
-    "/home/mark/fuel/data/games/godot/builds/ludum_dare/42_a_fight_on_the_waves/"
+    "/home/mark/fuel/data/games/godot/builds/ludum_dare/42_#{project_name}/"
   end
 
   def project_version
@@ -24,19 +28,19 @@ module BuildMetaData
 
   def build_dirs
     {
-      windows: "crux_swarm_#{project_version}_windows",
-      linux: "crux_swarm_#{project_version}_linux",
-      mac: "crux_swarm_#{project_version}_mac",
-      mac_hi_res: "crux_swarm_#{project_version}_mac_hi_res",
+      windows: "#{project_name}_#{project_version}_windows",
+      linux: "#{project_name}_#{project_version}_linux",
+      mac: "#{project_name}_#{project_version}_mac",
+      mac_hi_res: "#{project_name}_#{project_version}_mac_hi_res",
     }
   end
 
   def executable_name
     {
-      windows: "crux_swarm_#{project_version}_windows.exe",
-      linux: "crux_swarm_#{project_version}_linux.x11",
-      mac: "crux_swarm_#{project_version}_mac.zip",
-      mac_hi_res: "crux_swarm_#{project_version}_mac_hi_res.zip",
+      windows: "#{project_name}_#{project_version}_windows.exe",
+      linux: "#{project_name}_#{project_version}_linux.x11",
+      mac: "#{project_name}_#{project_version}_mac.zip",
+      mac_hi_res: "#{project_name}_#{project_version}_mac_hi_res.zip",
     }
   end
 
@@ -51,7 +55,8 @@ module Butler
 
   def user_game
     # "markopolodev/crux-swarm-butler-test"
-    "markopolodev/crux-swarm"
+    # "markopolodev/crux-swarm"
+    "markopolodev/a-fight-on-the-waves"
   end
 
   def channels
