@@ -174,7 +174,7 @@ Publish Hour
 
 
 
-
+A Fight on the Waves is an autoscrolling boss fight. Dodge from island to island as the space you have to maneuver shrinks. Destroy the boss before you fall prey to it!
 
     [Ludum Dare 42](https://ldjam.com/events/ludum-dare/42/a-fight-on-the-waves) page.
     Download the game on [itch.io](https://markopolodev.itch.io/a-fight-on-the-waves)!
